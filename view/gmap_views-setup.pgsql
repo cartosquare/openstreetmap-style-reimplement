@@ -41,10 +41,25 @@ DROP VIEW IF EXISTS marinas_area;
 DROP VIEW IF EXISTS piers_area;
 DROP VIEW IF EXISTS piers;
 DROP VIEW IF EXISTS locks;
+DROP VIEW IF EXISTS bridges_layer1;
+DROP VIEW IF EXISTS bridges_access1;
+DROP VIEW IF EXISTS bridges_directions1;
+DROP VIEW IF EXISTS bridges_layer2;
+DROP VIEW IF EXISTS bridges_access2;
+DROP VIEW IF EXISTS bridges_directions2;
+DROP VIEW IF EXISTS bridges_layer3;
+DROP VIEW IF EXISTS bridges_access3;
+DROP VIEW IF EXISTS bridges_directions3;
+DROP VIEW IF EXISTS bridges_layer4;
+DROP VIEW IF EXISTS bridges_access4;
+DROP VIEW IF EXISTS bridges_directions4;
+DROP VIEW IF EXISTS bridges_layer5;
+DROP VIEW IF EXISTS bridges_access5;
+DROP VIEW IF EXISTS bridges_directions5;
 
 DELETE FROM geometry_columns
 WHERE f_table_name
-   IN ('roads', 'tunnels', 'minor_roads_casing', 'minor_roads_fill', 'turning_circle', 'footbikecycle_tunnels', 'tracks_tunnels', 'line_features', 'polygon_barriers', 'highway_area_casing', 'highway_area_fill', 'tracks_notunnel_nobridge', 'access_pre_bridges', 'direction_pre_bridges', 'landcover', 'landcover_line', 'sports_grounds', 'ferry_routes', 'aerialways', 'buildings_lz', 'buildings', 'water_lines_casing', 'water_areas', 'water_areas_overlay', 'glaciers_text', 'water_lines_low_zoom', 'water_lines', 'dam', 'marinas_area', 'piers_area', 'piers', 'locks');
+   IN ('roads', 'tunnels', 'minor_roads_casing', 'minor_roads_fill', 'turning_circle', 'footbikecycle_tunnels', 'tracks_tunnels', 'line_features', 'polygon_barriers', 'highway_area_casing', 'highway_area_fill', 'tracks_notunnel_nobridge', 'access_pre_bridges', 'direction_pre_bridges', 'landcover', 'landcover_line', 'sports_grounds', 'ferry_routes', 'aerialways', 'buildings_lz', 'buildings', 'water_lines_casing', 'water_areas', 'water_areas_overlay', 'glaciers_text', 'water_lines_low_zoom', 'water_lines', 'dam', 'marinas_area', 'piers_area', 'piers', 'locks', 'bridges_layer1', 'bridges_access1', 'bridges_directions1', 'bridges_layer2', 'bridges_access2', 'bridges_directions2', 'bridges_layer3', 'bridges_access3', 'bridges_directions3', 'bridges_layer4', 'bridges_access4', 'bridges_directions4', 'bridges_layer5', 'bridges_access5', 'bridges_directions5');
 
 CREATE VIEW roads AS
 select way,highway,
@@ -266,6 +281,157 @@ CREATE VIEW locks AS
 select way,waterway from planet_osm_point where waterway='lock_gate';
 
 
+CREATE VIEW bridges_layer1 AS 
+select way,highway,aeroway,horse,bicycle,foot,tracktype,
+       case when railway in ('spur','siding')
+              or (railway='rail' and service in ('spur','siding','yard'))
+            then 'INT-spur-siding-yard'::text else railway end as railway
+       from planet_osm_line
+       where (highway is not null
+              or aeroway in ('runway','taxiway')
+              or railway in ('light_rail','subway','narrow_gauge','rail','spur','siding','disused','abandoned','construction'))
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '1'
+       order by z_order;
+         
+CREATE VIEW bridges_access1 AS 
+select way,access,highway,
+       case when service in ('parking_aisle','drive-through','driveway') then 'INT-minor'::text end as service
+       from planet_osm_line
+       where access is not null and highway is not null
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '1';
+         
+CREATE VIEW bridges_directions1 AS 
+select way,
+       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway
+       from planet_osm_line
+       where oneway is not null
+         and (highway is not null or railway is not null or waterway is not null)
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '1';
+         
+         
+CREATE VIEW bridges_layer2 AS 
+select way,highway,aeroway,horse,bicycle,foot,tracktype,
+       case when railway in ('spur','siding')
+              or (railway='rail' and service in ('spur','siding','yard'))
+            then 'INT-spur-siding-yard'::text else railway end as railway
+       from planet_osm_line
+       where (highway is not null
+              or aeroway in ('runway','taxiway')
+              or railway in ('light_rail','subway','narrow_gauge','rail','spur','siding','disused','abandoned','construction'))
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '2'
+       order by z_order;
+       
+CREATE VIEW bridges_access2 AS 
+select way,access,highway,
+       case when service in ('parking_aisle','drive-through','driveway') then 'INT-minor'::text end as service
+       from planet_osm_line
+       where access is not null and highway is not null
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '2';
+         
+CREATE VIEW bridges_directions2 AS 
+select way,
+       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway
+       from planet_osm_line
+       where oneway is not null
+         and (highway is not null or railway is not null or waterway is not null)
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '2';
+         
+CREATE VIEW bridges_layer3 AS 
+select way,highway,aeroway,horse,bicycle,foot,tracktype,
+       case when railway in ('spur','siding')
+              or (railway='rail' and service in ('spur','siding','yard'))
+            then 'INT-spur-siding-yard'::text else railway end as railway
+       from planet_osm_line
+       where (highway is not null
+              or aeroway in ('runway','taxiway')
+              or railway in ('light_rail','subway','narrow_gauge','rail','spur','siding','disused','abandoned','construction'))
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '3'
+       order by z_order;
+       
+CREATE VIEW bridges_access3 AS 
+select way,access,highway,
+       case when service in ('parking_aisle','drive-through','driveway') then 'INT-minor'::text end as service
+       from planet_osm_line
+       where access is not null and highway is not null
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '3';
+         
+CREATE VIEW bridges_directions3 AS 
+select way,
+       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway
+       from planet_osm_line
+       where oneway is not null
+         and (highway is not null or railway is not null or waterway is not null)
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '3';
+         
+CREATE VIEW bridges_layer4 AS 
+select way,highway,aeroway,horse,bicycle,foot,tracktype,
+       case when railway in ('spur','siding')
+              or (railway='rail' and service in ('spur','siding','yard'))
+            then 'INT-spur-siding-yard'::text else railway end as railway
+       from planet_osm_line
+       where (highway is not null
+              or aeroway in ('runway','taxiway')
+              or railway in ('light_rail','subway','narrow_gauge','rail','spur','siding','disused','abandoned','construction'))
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '4'
+       order by z_order;
+       
+CREATE VIEW bridges_access4 AS 
+select way,access,highway,
+       case when service in ('parking_aisle','drive-through','driveway') then 'INT-minor'::text end as service
+       from planet_osm_line
+       where access is not null and highway is not null
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '4';
+         
+CREATE VIEW bridges_directions4 AS 
+select way,
+       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway
+       from planet_osm_line
+       where oneway is not null
+         and (highway is not null or railway is not null or waterway is not null)
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '4';
+         
+CREATE VIEW bridges_layer5 AS 
+select way,highway,aeroway,horse,bicycle,foot,tracktype,
+       case when railway in ('spur','siding')
+              or (railway='rail' and service in ('spur','siding','yard'))
+            then 'INT-spur-siding-yard'::text else railway end as railway
+       from planet_osm_line
+       where (highway is not null
+              or aeroway in ('runway','taxiway')
+              or railway in ('light_rail','subway','narrow_gauge','rail','spur','siding','disused','abandoned','construction'))
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '5'
+       order by z_order;
+       
+CREATE VIEW bridges_access5 AS 
+select way,access,highway,
+       case when service in ('parking_aisle','drive-through','driveway') then 'INT-minor'::text end as service
+       from planet_osm_line
+       where access is not null and highway is not null
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '5';
+         
+CREATE VIEW bridges_directions5 AS 
+select way,
+       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway
+       from planet_osm_line
+       where oneway is not null
+         and (highway is not null or railway is not null or waterway is not null)
+         and bridge in ('yes','true','1','viaduct','swing','lift')
+         and layer = '5';
+
 INSERT INTO geometry_columns
   (f_table_catalog, f_table_schema, f_table_name, f_geometry_column, coord_dimension, srid, "type")
 VALUES
@@ -300,6 +466,20 @@ VALUES
   ('', 'public', 'marinas_area', 'way', 2, 900913, 'GEOMETRY'),
   ('', 'public', 'piers_area', 'way', 2, 900913, 'GEOMETRY'),
   ('', 'public', 'piers', 'way', 2, 900913, 'LINESTRING'),
-  ('', 'public', 'locks', 'way', 2, 900913, 'POINT');
-
+  ('', 'public', 'locks', 'way', 2, 900913, 'POINT'),
+  ('', 'public', 'bridges_layer1', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_access1', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_directions1', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_layer2', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_access2', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_directions2', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_layer3', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_access3', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_directions3', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_layer4', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_access4', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_directions4', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_layer5', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_access5', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'bridges_directions5', 'way', 2, 900913, 'LINESTRING');
 COMMIT;
