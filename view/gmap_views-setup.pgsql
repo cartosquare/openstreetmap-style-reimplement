@@ -56,10 +56,25 @@ DROP VIEW IF EXISTS bridges_directions4;
 DROP VIEW IF EXISTS bridges_layer5;
 DROP VIEW IF EXISTS bridges_access5;
 DROP VIEW IF EXISTS bridges_directions5;
+DROP VIEW IF EXISTS trams;
+DROP VIEW IF EXISTS guideways;
+DROP VIEW IF EXISTS admin_01234;
+DROP VIEW IF EXISTS admin_5678;
+DROP VIEW IF EXISTS admin_other;
+DROP VIEW IF EXISTS placenames_large;
+DROP VIEW IF EXISTS placenames_capital;
+DROP VIEW IF EXISTS placenames_medium;
+DROP VIEW IF EXISTS placenames_small;
+DROP VIEW IF EXISTS amenity_stations;
+DROP VIEW IF EXISTS amenity_stations_poly;
+DROP VIEW IF EXISTS amenity_symbols;
+DROP VIEW IF EXISTS amenity_symbols_poly;
+DROP VIEW IF EXISTS amenity_points;
+DROP VIEW IF EXISTS amenity_points_poly;
 
 DELETE FROM geometry_columns
 WHERE f_table_name
-   IN ('roads', 'tunnels', 'minor_roads_casing', 'minor_roads_fill', 'turning_circle', 'footbikecycle_tunnels', 'tracks_tunnels', 'line_features', 'polygon_barriers', 'highway_area_casing', 'highway_area_fill', 'tracks_notunnel_nobridge', 'access_pre_bridges', 'direction_pre_bridges', 'landcover', 'landcover_line', 'sports_grounds', 'ferry_routes', 'aerialways', 'buildings_lz', 'buildings', 'water_lines_casing', 'water_areas', 'water_areas_overlay', 'glaciers_text', 'water_lines_low_zoom', 'water_lines', 'dam', 'marinas_area', 'piers_area', 'piers', 'locks', 'bridges_layer1', 'bridges_access1', 'bridges_directions1', 'bridges_layer2', 'bridges_access2', 'bridges_directions2', 'bridges_layer3', 'bridges_access3', 'bridges_directions3', 'bridges_layer4', 'bridges_access4', 'bridges_directions4', 'bridges_layer5', 'bridges_access5', 'bridges_directions5');
+   IN ('roads', 'tunnels', 'minor_roads_casing', 'minor_roads_fill', 'turning_circle', 'footbikecycle_tunnels', 'tracks_tunnels', 'line_features', 'polygon_barriers', 'highway_area_casing', 'highway_area_fill', 'tracks_notunnel_nobridge', 'access_pre_bridges', 'direction_pre_bridges', 'landcover', 'landcover_line', 'sports_grounds', 'ferry_routes', 'aerialways', 'buildings_lz', 'buildings', 'water_lines_casing', 'water_areas', 'water_areas_overlay', 'glaciers_text', 'water_lines_low_zoom', 'water_lines', 'dam', 'marinas_area', 'piers_area', 'piers', 'locks', 'bridges_layer1', 'bridges_access1', 'bridges_directions1', 'bridges_layer2', 'bridges_access2', 'bridges_directions2', 'bridges_layer3', 'bridges_access3', 'bridges_directions3', 'bridges_layer4', 'bridges_access4', 'bridges_directions4', 'bridges_layer5', 'bridges_access5', 'bridges_directions5', 'trams', 'guideways', 'admin_01234', 'admin_5678', 'admin_other', 'placenames_large', 'placenames_capital', 'placenames_medium', 'placenames_small', 'amenity_stations', 'amenity_stations_poly', 'amenity_symbols', 'amenity_symbols_poly', 'amenity_points', 'amenity_points_poly');
 
 CREATE VIEW roads AS
 select way,highway,
@@ -432,6 +447,110 @@ select way,
          and bridge in ('yes','true','1','viaduct','swing','lift')
          and layer = '5';
 
+CREATE VIEW trams AS
+select way,railway,bridge from planet_osm_line where railway='tram' and (tunnel is null or tunnel not in ('yes','true','1'));
+
+
+CREATE VIEW guideways AS
+select way from planet_osm_line where highway='bus_guideway' and (tunnel is null or tunnel not in ('yes','true','1'));
+
+CREATE VIEW admin_01234 AS
+select way,admin_level
+       from planet_osm_roads
+       where "boundary"='administrative'
+         and admin_level in ('0','1','2','3','4');
+
+CREATE VIEW admin_5678 AS
+select way,admin_level
+       from planet_osm_roads
+       where "boundary"='administrative'
+         and admin_level in ('5','6','7','8');
+         
+CREATE VIEW admin_other AS
+select way,admin_level
+       from planet_osm_roads
+       where "boundary"='administrative'
+         and (admin_level is null or admin_level not in ('0','1','2','3','4','5','6','7','8'));
+
+CREATE VIEW placenames_large AS
+select way,place,name,ref
+       from planet_osm_point
+       where place in ('country','state');
+       
+CREATE VIEW placenames_capital AS
+select way,place,name,ref
+       from planet_osm_point
+       where place in ('city','metropolis','town') and capital='yes';
+       
+CREATE VIEW placenames_medium AS
+select way,place,name
+      from planet_osm_point
+      where place in ('city','metropolis','town','large_town','small_town')
+        and (capital is null or capital != 'yes');
+        
+CREATE VIEW placenames_small AS
+select way,place,name
+      from planet_osm_point
+      where place in ('suburb','village','large_village','hamlet','locality','isolated_dwelling','farm');
+
+CREATE VIEW amenity_stations AS
+select way,name,railway,aerialway,disused
+      from planet_osm_point
+      where railway in ('station','halt','tram_stop','subway_entrance')
+         or aerialway='station';
+         
+CREATE VIEW amenity_stations_poly AS
+select way,name,railway,aerialway,disused
+      from planet_osm_polygon
+      where railway in ('station','halt','tram_stop')
+         or aerialway='station';
+
+CREATE VIEW amenity_symbols AS
+select *
+      from planet_osm_point
+      where aeroway in ('airport','aerodrome','helipad')
+         or barrier in ('bollard','gate','lift_gate','block')
+         or highway in ('mini_roundabout','gate')
+         or man_made in ('lighthouse','power_wind','windmill','mast')
+         or (power='generator' and ("generator:source"='wind' or power_source='wind'))
+         or "natural" in ('peak','volcano','spring','tree','cave_entrance')
+         or railway='level_crossing';
+         
+CREATE VIEW amenity_symbols_poly AS
+select *
+      from planet_osm_polygon
+      where aeroway in ('airport','aerodrome','helipad')
+         or barrier in ('bollard','gate','lift_gate','block')
+         or highway in ('mini_roundabout','gate')
+         or man_made in ('lighthouse','power_wind','windmill','mast')
+         or (power='generator' and ("generator:source"='wind' or power_source='wind'))
+         or "natural" in ('peak','volcano','spring','tree')
+         or railway='level_crossing';
+         
+CREATE VIEW amenity_points AS
+select way,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure
+      from planet_osm_point
+      where amenity is not null
+         or shop is not null
+         or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet')
+         or highway in ('bus_stop','traffic_signals','ford')
+         or man_made in ('mast','water_tower')
+         or historic in ('memorial','archaeological_site')
+         or waterway='lock'
+         or lock='yes'
+         or leisure in ('playground','slipway');
+         
+CREATE VIEW amenity_points_poly AS
+select way,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure
+      from planet_osm_polygon
+      where amenity is not null
+         or shop is not null
+         or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet')
+         or highway in ('bus_stop','traffic_signals')
+         or man_made in ('mast','water_tower')
+         or historic in ('memorial','archaeological_site')
+         or leisure='playground';
+
 INSERT INTO geometry_columns
   (f_table_catalog, f_table_schema, f_table_name, f_geometry_column, coord_dimension, srid, "type")
 VALUES
@@ -481,5 +600,16 @@ VALUES
   ('', 'public', 'bridges_directions4', 'way', 2, 900913, 'LINESTRING'),
   ('', 'public', 'bridges_layer5', 'way', 2, 900913, 'LINESTRING'),
   ('', 'public', 'bridges_access5', 'way', 2, 900913, 'LINESTRING'),
-  ('', 'public', 'bridges_directions5', 'way', 2, 900913, 'LINESTRING');
+  ('', 'public', 'bridges_directions5', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'trams', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'guideways', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'admin_01234', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'admin_5678', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'admin_other', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'amenity_stations_poly', 'way', 2, 900913, 'GEOMETRY'),
+  ('', 'public', 'amenity_stations', 'way', 2, 900913, 'POINT'),
+  ('', 'public', 'amenity_symbols_poly', 'way', 2, 900913, 'GEOMETRY'),
+  ('', 'public', 'amenity_symbols', 'way', 2, 900913, 'POINT'),
+  ('', 'public', 'amenity_points_poly', 'way', 2, 900913, 'GEOMETRY'),
+  ('', 'public', 'amenity_points', 'way', 2, 900913, 'POINT');
 COMMIT;

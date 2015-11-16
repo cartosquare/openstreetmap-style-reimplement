@@ -2,7 +2,7 @@
     "background_color": [181,208,208],
     "init": {
 	"center": [12956216.491, 4853426.417],
-	"res": 156543.033928
+	"res": 152.8740565703125
 	},
     "data_sources": {
 	"world": {
@@ -87,13 +87,14 @@
 	    "data_source": "nepopulated",
 	    "data_name": "ne_10m_populated_places",
 	    "encode": "utf-8",
+		"visible": "false",
 	    "rules": [{
 		    "comment": "3-4",
 		    "res_max": 19568,
 		    "res_min": 9783.9396205,
 		    "symbol_type": "label",
 		    "label_field": "NAME",
-			"data_filter": "SCALERANK=0",
+			"data_filter": "SCALERANK=1",
 		    "label_text_font": "Microsoft Yahei",
 		    "label_text_size": 8,
 		    "label_text_outline_color": [255,255,255],
@@ -11907,6 +11908,2294 @@
 		    "line_width": 4
 		}
 		]
-	}
+	},
+	"trams": {
+		"data_source": "osm",
+	    "data_name": "trams",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "13-14",
+		    "res_max": 19.10925707128906,
+		    "res_min": 9.55462853564453,
+		    "data_filter": "railway = 'tram'",
+		    "symbol_type": "line",
+		    "line_color": [68, 68, 68],
+		    "line_width": 1
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "data_filter": "railway = 'tram' and (bridge is null or bridge != 'yes')",
+		    "symbol_type": "line",
+		    "line_color": [68, 68, 68],
+		    "line_width": 2
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "data_filter": "railway = 'tram' and bridge = 'yes'",
+		    "symbol_type": "line",
+		    "line_color": [0, 0, 0],
+		    "line_width": 5
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "data_filter": "railway = 'tram' and bridge = 'yes'",
+		    "symbol_type": "line",
+		    "line_color": [255, 255, 255],
+		    "line_width": 4
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "data_filter": "railway = 'tram' and bridge = 'yes'",
+		    "symbol_type": "line",
+		    "line_color": [68, 68, 68],
+		    "line_width": 2
+		}]
+	},
+	"guideways": {
+		"data_source": "osm",
+	    "data_name": "guideways",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "13",
+		    "res_max": 19.10925707128906,
+		    "res_min": 19.10925707128906,
+		    "symbol_type": "line",
+			"line_join": "round",
+		    "line_color": [102, 102, 255],
+		    "line_width": 3
+		},{
+			"comment": "13",
+		    "res_max": 19.10925707128906,
+		    "res_min": 19.10925707128906,
+		    "symbol_type": "line",
+			"line_join": "round",
+		    "line_color": [255, 255, 255],
+			"line_dasharray": [8, 12],
+		    "line_width": 1
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+		    "symbol_type": "line",
+			"line_join": "round",
+		    "line_color": [102, 102, 255],
+		    "line_width": 3
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+		    "symbol_type": "line",
+			"line_join": "round",
+		    "line_color": [255, 255, 255],
+			"line_dasharray": [0,11,8,1],
+		    "line_width": 1
+		}
+		]
+	},
+	"admin-01234": {
+		"data_source": "osm",
+	    "data_name": "admin_01234",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "4-6",
+		    "res_max": 9783.9396205,
+		    "res_min": 2445.984905125,
+			"data_filter": "admin_level = '2' or admin_level = '3'",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+		    "line_width": 0.6,
+			"line_opacity": 0.2
+		},{
+			"comment": "7-9",
+		    "res_max": 1222.9924525625,
+		    "res_min": 305.748113140625,
+			"data_filter": "admin_level = '2' or admin_level = '3'",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+		    "line_width": 2,
+			"line_opacity": 0.2
+		},{
+			"comment": "10-19",
+		    "res_max": 152.8740565703125,
+		    "res_min": 0,
+			"data_filter": "admin_level = '2'",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+		    "line_width": 6,
+			"line_opacity": 0.1
+		},{
+			"comment": "10-19",
+		    "res_max": 152.8740565703125,
+		    "res_min": 0,
+			"data_filter": "admin_level = '3'",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+		    "line_width": 5,
+			"line_dasharray": [4, 2],
+			"line_opacity": 0.1
+		},{
+			"comment": "4-6",
+		    "res_max": 9783.9396205,
+		    "res_min": 2445.984905125,
+			"data_filter": "admin_level = '4'",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+			"line_dasharray": [4, 3],
+		    "line_width": 0.6,
+			"line_opacity": 0.2
+		},{
+			"comment": "7-10",
+		    "res_max": 1222.9924525625,
+		    "res_min": 152.8740565703125,
+			"data_filter": "admin_level = '4'",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+			"line_dasharray": [4, 3],
+		    "line_width": 1,
+			"line_opacity": 0.2
+		},{
+			"comment": "11-19",
+		    "res_max": 76.43702828515625,
+		    "res_min": 0,
+			"data_filter": "admin_level = '4'",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+			"line_dasharray": [4, 3],
+		    "line_width": 3,
+			"line_opacity": 0.2
+		}]
+	},
+	"admin-5678": {
+		"data_source": "osm",
+	    "data_name": "admin_5678",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "11-19",
+		    "res_max": 76.43702828515625,
+		    "res_min": 0,
+			"data_filter": "admin_level = '5'",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+			"line_dasharray": [6,3,2,3,2,3],
+		    "line_width": 2,
+			"line_opacity": 0.3
+		},{
+			"comment": "11-19",
+		    "res_max": 76.43702828515625,
+		    "res_min": 0,
+			"data_filter": "admin_level = '6'",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+			"line_dasharray": [6,3,2,3],
+		    "line_width": 2,
+			"line_opacity": 0.3
+		},{
+			"comment": "12-19",
+		    "res_max": 38.21851414257813,
+		    "res_min": 0,
+			"data_filter": "admin_level = '8' or admin_level = '7'",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+			"line_dasharray": [5,2],
+		    "line_width": 1.5,
+			"line_opacity": 0.3
+		}]
+	},
+	"admin-other": {
+		"data_source": "osm",
+	    "data_name": "admin_other",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "13-19",
+		    "res_max": 19.10925707128906,
+		    "res_min": 0,
+			"data_filter": "admin_level = '10' or admin_level = '9'",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+			"line_dasharray": [2,3],
+		    "line_width": 2,
+			"line_opacity": 0.3
+		},{
+			"comment": "9-11",
+		    "res_max": 305.748113140625,
+		    "res_min": 76.43702828515625,
+			"data_filter": "admin_level != ''",
+		    "symbol_type": "line",
+		    "line_color": [128, 0, 128],
+			"line_dasharray": [2,3],
+		    "line_width": 1,
+			"line_opacity": 0.2
+		}]
+	},
+	"placenames-large": {
+		"data_source": "osm",
+	    "data_name": "placenames_large",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "1-2",
+		    "res_max": 78272,
+		    "res_min": 39135,
+			"data_filter": "place = 'continent'",
+		    "symbol_type": "label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [157,108,157]
+		},{
+			"comment": "2-3",
+		    "res_max": 39136,
+		    "res_min": 19567,
+			"data_filter": "place = 'country'",
+		    "symbol_type": "label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [157,108,157]
+		},{
+			"comment": "4-6",
+		    "res_max": 9784,
+		    "res_min": 2445,
+			"data_filter": "place = 'country'",
+		    "symbol_type": "label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [157,108,157]
+		},{
+			"comment": "4",
+		    "res_max": 9784,
+		    "res_min": 9783,
+			"data_filter": "place = 'state'",
+		    "symbol_type": "label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [157,108,157]
+		},{
+			"comment": "5-6",
+		    "res_max": 4892,
+		    "res_min": 2445,
+			"data_filter": "place = 'state'",
+		    "symbol_type": "label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [157,108,157]
+		},{
+			"comment": "7-8",
+		    "res_max": 1223,
+		    "res_min": 611,
+			"data_filter": "place = 'state'",
+		    "symbol_type": "label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [157,108,157]
+		}]
+		},
+		"placenames-capital": {
+		"data_source": "osm",
+	    "data_name": "placenames_capital",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "5",
+		    "res_max": 4892,
+		    "res_min": 4891,
+		    "symbol_type": "label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "6-8",
+		    "res_max": 2446,
+		    "res_min": 611,
+		    "symbol_type": "label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 11,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},
+		{
+			"comment": "9-10",
+		    "res_max": 306,
+		    "res_min": 152,
+		    "symbol_type": "label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 11,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "11-14",
+		    "res_max": 76.43702828515625,
+		    "res_min": 9.55462853564453,
+		    "symbol_type": "label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 14,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		}]
+		},
+		"placenames-medium": {
+		"data_source": "osm",
+	    "data_name": "placenames_medium",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "6-8",
+		    "res_max": 2446,
+		    "res_min": 611,
+		    "symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'city' or place = 'metropolis'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "9-10",
+		    "res_max": 306,
+		    "res_min": 152,
+		    "symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'city' or place = 'metropolis'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 11,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "11-14",
+		    "res_max": 76.43702828515625,
+		    "res_min": 9.55462853564453,
+		    "symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'city' or place = 'metropolis'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 14,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "9-10",
+		    "res_max": 306,
+		    "res_min": 152,
+		    "symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'town' or place = 'large_town' or place = 'small_town'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "11-13",
+		    "res_max": 76.43702828515625,
+		    "res_min": 19.10925707128906,
+		    "symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'town' or place = 'large_town' or place = 'small_town'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+		    "symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'town' or place = 'large_town' or place = 'small_town'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 14,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [119, 119, 119]
+		}]
+		},
+		"placenames-small": {
+		"data_source": "osm",
+	    "data_name": "placenames_small",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "12-13",
+		    "res_max": 38.21851414257813,
+		    "res_min": 19.10925707128906,
+		    "symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'suburb'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+		    "symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'suburb'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 13,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "12-14",
+		    "res_max": 38.21851414257813,
+		    "res_min": 9.55462853564453,
+		    "symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'village' or place = 'large_village'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'village' or place = 'large_village'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 12,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [119, 119, 119]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+		    "symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'hamlet' or place = 'locality' or place = 'isolated_dwelling' or place = 'farm'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 11,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [119, 119, 119]
+		}]
+		},
+		"amenity-stations": {
+		"data_source": "osm",
+	    "data_name": "amenity_stations",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "18-19",
+		    "res_max": 0.597164283477783,
+		    "res_min": 0,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'subway_entrance'",
+			"marker_image": "walking.n.12.png"
+		},{
+			"comment": "12-12",
+		    "res_max": 38.21851414257813,
+		    "res_min": 38.21851414257813,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'station' and disused = 'yes'",
+			"marker_image": "halt.png"
+		},{
+			"comment": "13-19",
+		    "res_max": 19.10925707128906,
+		    "res_min": 0,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'station' and disused = 'yes'",
+			"marker_image": "station_disused.png"
+		},{
+			"comment": "13-14",
+		    "res_max": 19.10925707128906,
+		    "res_min": 9.55462853564453,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'station' and (disused is null or disused != 'yes')",
+			"marker_image": "station_small.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'station' and (disused is null or disused != 'yes')",
+			"marker_image": "station.png"
+		},{
+			"comment": "13-14",
+		    "res_max": 19.10925707128906,
+		    "res_min": 9.55462853564453,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'halt' or railway = 'tram_stop' or aerialway = 'station'",
+			"marker_image": "halt.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'halt' or railway = 'tram_stop' or aerialway = 'station'",
+			"marker_image": "station_small.png"
+		},{
+			"comment": "14",
+		    "res_max": 9.55462853564453,
+		    "res_min": 9.55462853564453,
+		    "symbol_type": "label",
+			"data_filter": "railway = 'halt' or railway = 'tram_stop' or aerialway = 'station'",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 102, 255],
+			"label_offset_y": -10,
+			"label_align": "center"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "symbol_type": "label",
+			"data_filter": "railway = 'halt' or railway = 'tram_stop' or aerialway = 'station'",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 102, 255],
+			"label_offset_y": -10,
+			"label_align": "center"
+		},{
+			"comment": "14",
+		    "res_max": 9.55462853564453,
+		    "res_min": 9.55462853564453,
+		    "symbol_type": "label",
+			"data_filter": "railway = 'station' and (disused is null or disused != 'yes')",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 102, 255],
+			"label_offset_y": -8,
+			"label_align": "center"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "symbol_type": "label",
+			"data_filter": "railway = 'station' and (disused is null or disused != 'yes')",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 11,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 102, 255],
+			"label_offset_y": -10,
+			"label_align": "center"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "symbol_type": "label",
+			"data_filter": "railway = 'station' and disused = 'yes'",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [193,193,193],
+			"label_offset_y": -9,
+			"label_align": "center"
+		}]
+		},
+		"amenity-stations-poly": {
+		"data_source": "osm",
+	    "data_name": "amenity_stations_poly",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "18-19",
+		    "res_max": 0.597164283477783,
+		    "res_min": 0,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'subway_entrance'",
+			"marker_image": "walking.n.12.png"
+		},{
+			"comment": "12-12",
+		    "res_max": 38.21851414257813,
+		    "res_min": 38.21851414257813,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'station' and disused = 'yes'",
+			"marker_image": "halt.png"
+		},{
+			"comment": "13-19",
+		    "res_max": 19.10925707128906,
+		    "res_min": 0,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'station' and disused = 'yes'",
+			"marker_image": "station_disused.png"
+		},{
+			"comment": "13-14",
+		    "res_max": 19.10925707128906,
+		    "res_min": 9.55462853564453,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'station' and (disused is null or disused != 'yes')",
+			"marker_image": "station_small.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'station' and (disused is null or disused != 'yes')",
+			"marker_image": "station.png"
+		},{
+			"comment": "13-14",
+		    "res_max": 19.10925707128906,
+		    "res_min": 9.55462853564453,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'halt' or railway = 'tram_stop' or aerialway = 'station'",
+			"marker_image": "halt.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "symbol_type": "marker",
+			"data_filter": "railway = 'halt' or railway = 'tram_stop' or aerialway = 'station'",
+			"marker_image": "station_small.png"
+		},{
+			"comment": "14",
+		    "res_max": 9.55462853564453,
+		    "res_min": 9.55462853564453,
+		    "symbol_type": "polygon_label",
+			"data_filter": "railway = 'halt' or railway = 'tram_stop' or aerialway = 'station'",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 102, 255],
+			"label_offset_y": -10,
+			"label_align": "center"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "symbol_type": "polygon_label",
+			"data_filter": "railway = 'halt' or railway = 'tram_stop' or aerialway = 'station'",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 102, 255],
+			"label_offset_y": -10,
+			"label_align": "center"
+		},{
+			"comment": "14",
+		    "res_max": 9.55462853564453,
+		    "res_min": 9.55462853564453,
+		    "symbol_type": "polygon_label",
+			"data_filter": "railway = 'station' and (disused is null or disused != 'yes')",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 102, 255],
+			"label_offset_y": -8,
+			"label_align": "center"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "symbol_type": "polygon_label",
+			"data_filter": "railway = 'station' and (disused is null or disused != 'yes')",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 11,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 102, 255],
+			"label_offset_y": -10,
+			"label_align": "center"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+		    "symbol_type": "polygon_label",
+			"data_filter": "railway = 'station' and disused = 'yes'",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [193,193,193],
+			"label_offset_y": -9,
+			"label_align": "center"
+		}]
+		},
+		"amenity-symbols": {
+		"data_source": "osm",
+	    "data_name": "amenity_symbols",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "aeroway = 'helipad'",
+			"symbol_type": "label",
+			"label_icon": "helipad.p.16.png",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 146, 218]
+		},{
+			"comment": "9-10",
+		    "res_max": 306,
+		    "res_min": 152,
+			"data_filter": "aeroway = 'airport'",
+			"symbol_type": "label",
+			"label_icon": "airport.p.16.png",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 146, 218]
+		},{
+			"comment": "11-12",
+		    "res_max": 76.43702828515625,
+		    "res_min": 38.21851414257813,
+			"data_filter": "aeroway = 'airport'",
+			"symbol_type": "label",
+			"label_icon": "airport.p.16.png",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 146, 218]
+		},{
+			"comment": "10",
+		    "res_max": 153,
+		    "res_min": 152,
+			"data_filter": "aeroway = 'aerodrome'",
+			"symbol_type": "label",
+			"label_icon": "aerodrome.p.16.png",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 146, 218]
+		},{
+			"comment": "11-12",
+		    "res_max": 76.43702828515625,
+		    "res_min": 38.21851414257813,
+			"data_filter": "aeroway = 'aerodrome'",
+			"symbol_type": "label",
+			"label_icon": "aerodrome.p.16.png",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 146, 218]
+		},{
+			"comment": "14-15",
+		    "res_max": 9.55462853564453,
+		    "res_min": 4.777314267822266,
+			"data_filter": "railway = 'level_crossing'",
+			"symbol_type": "marker",
+			"marker_image": "level_crossing.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "railway = 'level_crossing'",
+			"symbol_type": "marker",
+			"marker_image": "level_crossing2.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "man_made = 'lighthouse'",
+			"symbol_type": "marker",
+			"marker_image": "lighthouse.p.20.png"
+		},{
+			"comment": "11-19",
+		    "res_max": 76.43702828515625,
+		    "res_min": 0,
+			"data_filter": "\"natural\" = 'peak'",
+			"symbol_type": "marker",
+			"marker_image": "peak.png"
+		},{
+			"comment": "11-19",
+		    "res_max": 76.43702828515625,
+		    "res_min": 0,
+			"data_filter": "\"natural\" = 'volcano'",
+			"symbol_type": "marker",
+			"marker_image": "volcano.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "\"natural\" = 'cave_entrance'",
+			"symbol_type": "marker",
+			"marker_image": "poi_cave.p.16.png"
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"data_filter": "\"natural\" = 'spring'",
+			"symbol_type": "marker",
+			"marker_image": "spring.png"
+		},{
+			"comment": "16",
+		    "res_max": 2.388657133911133,
+		    "res_min": 2.388657133911133,
+			"data_filter": "\"natural\" = 'tree'",
+			"symbol_type": "marker",
+			"marker_image": "tree.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "\"natural\" = 'tree'",
+			"symbol_type": "marker",
+			"marker_image": "tree2.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "(power = 'generator' and (\"generator:source\" = 'wind' or power_source = 'wind')) or man_made = 'power_wind'",
+			"symbol_type": "marker",
+			"marker_image": "power_wind.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "man_made = 'windmill'",
+			"symbol_type": "marker",
+			"marker_image": "windmill.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "man_made = 'mast'",
+			"symbol_type": "marker",
+			"marker_image": "communications.p.20.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "highway = 'mini_roundabout'",
+			"symbol_type": "marker",
+			"marker_image": "mini_round.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "highway = 'gate' or barrier = 'gate'",
+			"symbol_type": "marker",
+			"marker_image": "gate2.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "barrier = 'lift_gate'",
+			"symbol_type": "marker",
+			"marker_image": "liftgate.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "barrier = 'bollard' or barrier = 'block'",
+			"symbol_type": "marker",
+			"marker_image": "bollard.png"
+		}]
+		},
+		"amenity-symbols-poly": {
+		"data_source": "osm",
+	    "data_name": "amenity_symbols_poly",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "aeroway = 'helipad'",
+			"symbol_type": "polygon_label",
+			"label_icon": "helipad.p.16.png",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 146, 218]
+		},{
+			"comment": "9-10",
+		    "res_max": 306,
+		    "res_min": 152,
+			"data_filter": "aeroway = 'airport'",
+			"symbol_type": "polygon_label",
+			"label_icon": "airport.p.16.png",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 146, 218]
+		},{
+			"comment": "11-12",
+		    "res_max": 76.43702828515625,
+		    "res_min": 38.21851414257813,
+			"data_filter": "aeroway = 'airport'",
+			"symbol_type": "polygon_label",
+			"label_icon": "airport.p.16.png",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 146, 218]
+		},{
+			"comment": "10",
+		    "res_max": 153,
+		    "res_min": 152,
+			"data_filter": "aeroway = 'aerodrome'",
+			"symbol_type": "polygon_label",
+			"label_icon": "aerodrome.p.16.png",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 146, 218]
+		},{
+			"comment": "11-12",
+		    "res_max": 76.43702828515625,
+		    "res_min": 38.21851414257813,
+			"data_filter": "aeroway = 'aerodrome'",
+			"symbol_type": "polygon_label",
+			"label_icon": "aerodrome.p.16.png",
+			"label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255, 255, 255],
+		    "label_text_color": [102, 146, 218]
+		},{
+			"comment": "14-15",
+		    "res_max": 9.55462853564453,
+		    "res_min": 4.777314267822266,
+			"data_filter": "railway = 'level_crossing'",
+			"symbol_type": "marker",
+			"marker_image": "level_crossing.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "railway = 'level_crossing'",
+			"symbol_type": "marker",
+			"marker_image": "level_crossing2.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "man_made = 'lighthouse'",
+			"symbol_type": "marker",
+			"marker_image": "lighthouse.p.20.png"
+		},{
+			"comment": "11-19",
+		    "res_max": 76.43702828515625,
+		    "res_min": 0,
+			"data_filter": "\"natural\" = 'peak'",
+			"symbol_type": "marker",
+			"marker_image": "peak.png"
+		},{
+			"comment": "11-19",
+		    "res_max": 76.43702828515625,
+		    "res_min": 0,
+			"data_filter": "\"natural\" = 'volcano'",
+			"symbol_type": "marker",
+			"marker_image": "volcano.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "\"natural\" = 'cave_entrance'",
+			"symbol_type": "marker",
+			"marker_image": "poi_cave.p.16.png"
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"data_filter": "\"natural\" = 'spring'",
+			"symbol_type": "marker",
+			"marker_image": "spring.png"
+		},{
+			"comment": "16",
+		    "res_max": 2.388657133911133,
+		    "res_min": 2.388657133911133,
+			"data_filter": "\"natural\" = 'tree'",
+			"symbol_type": "marker",
+			"marker_image": "tree.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "\"natural\" = 'tree'",
+			"symbol_type": "marker",
+			"marker_image": "tree2.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "(power = 'generator' and (\"generator:source\" = 'wind' or power_source = 'wind')) or man_made = 'power_wind'",
+			"symbol_type": "marker",
+			"marker_image": "power_wind.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "man_made = 'windmill'",
+			"symbol_type": "marker",
+			"marker_image": "windmill.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "man_made = 'mast'",
+			"symbol_type": "marker",
+			"marker_image": "communications.p.20.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "highway = 'mini_roundabout'",
+			"symbol_type": "marker",
+			"marker_image": "mini_round.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "highway = 'gate' or barrier = 'gate'",
+			"symbol_type": "marker",
+			"marker_image": "gate2.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "barrier = 'lift_gate'",
+			"symbol_type": "marker",
+			"marker_image": "liftgate.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "barrier = 'bollard' or barrier = 'block'",
+			"symbol_type": "marker",
+			"marker_image": "bollard.png"
+		}]
+		},
+	"amenity-points": {
+		"data_source": "osm",
+	    "data_name": "amenity_points",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "13-19",
+		    "res_max": 19.10925707128906,
+		    "res_min": 0,
+			"data_filter": "tourism = 'alpine_hut'",
+			"symbol_type": "marker",
+			"marker_image": "alpinehut.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'shelter'",
+			"symbol_type": "marker",
+			"marker_image": "shelter2.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'atm'",
+			"symbol_type": "marker",
+			"marker_image": "atm2.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bank'",
+			"symbol_type": "marker",
+			"marker_image": "bank2.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bar'",
+			"symbol_type": "marker",
+			"marker_image": "bar.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bicycle_rental'",
+			"symbol_type": "marker",
+			"marker_image": "rental_bicycle.p.20.png"
+		},{
+			"comment": "16",
+		    "res_max": 2.388657133911133,
+		    "res_min": 2.388657133911133,
+			"data_filter": "amenity = 'bus_stop' or highway = 'bus_stop'",
+			"symbol_type": "marker",
+			"marker_image": "bus_stop_small.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bus_stop' or highway = 'bus_stop'",
+			"symbol_type": "marker",
+			"marker_image": "bus_stop.p.12.png"
+		},{
+			"comment": "16",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bus_station'",
+			"symbol_type": "marker",
+			"marker_image": "bus_station.n.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "highway = 'traffic_signals'",
+			"symbol_type": "marker",
+			"marker_image": "traffic_light.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'cafe'",
+			"symbol_type": "marker",
+			"marker_image": "cafe.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'camp_site'",
+			"symbol_type": "marker",
+			"marker_image": "camping.n.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "highway = 'ford'",
+			"symbol_type": "marker",
+			"marker_image": "transport_ford.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'caravan_site'",
+			"symbol_type": "marker",
+			"marker_image": "caravan_park.p.24.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'car_sharing'",
+			"symbol_type": "marker",
+			"marker_image": "car_share.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'chalet'",
+			"symbol_type": "marker",
+			"marker_image": "chalet.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'cinema'",
+			"symbol_type": "marker",
+			"marker_image": "cinema.p.24.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'fire_station'",
+			"symbol_type": "marker",
+			"marker_image": "firestation.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'fuel'",
+			"symbol_type": "marker",
+			"marker_image": "fuel.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'guest_house'",
+			"symbol_type": "marker",
+			"marker_image": "guest_house.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bed_and_breakfast'",
+			"symbol_type": "marker",
+			"marker_image": "bandb.p.20.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "amenity = 'hospital'",
+			"symbol_type": "marker",
+			"marker_image": "bandb.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'hostel'",
+			"symbol_type": "marker",
+			"marker_image": "hostel.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'hotel'",
+			"symbol_type": "marker",
+			"marker_image": "hotel2.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'motel'",
+			"symbol_type": "marker",
+			"marker_image": "information.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'embassy'",
+			"symbol_type": "marker",
+			"marker_image": "embassy.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'library'",
+			"symbol_type": "marker",
+			"marker_image": "library.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'courthouse'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_court.p.20.png"
+		},
+		{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "waterway = 'lock' or lock = 'yes'",
+			"symbol_type": "marker",
+			"marker_image": "lock_gate.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "man_made = 'mast'",
+			"symbol_type": "marker",
+			"marker_image": "communications.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'museum'",
+			"symbol_type": "marker",
+			"marker_image": "museum.p.16.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "amenity = 'parking' and (access = 'public' or access = 'yes' or (access is null or access != ''))",
+			"symbol_type": "marker",
+			"marker_image": "parking.p.16.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "amenity = 'parking' and (access != '' and (access is null or access != 'public') and (access is null or access != 'yes'))",
+			"symbol_type": "marker",
+			"marker_image": "parking_private.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'pharmacy'",
+			"symbol_type": "marker",
+			"marker_image": "pharmacy.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion = 'christian'",
+			"symbol_type": "marker",
+			"marker_image": "christian3.p.14.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion = 'muslim'",
+			"symbol_type": "marker",
+			"marker_image": "islamic3.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion = 'jewish'",
+			"symbol_type": "marker",
+			"marker_image": "jewish3.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion != 'christian' and religion != 'muslim' and religion != 'jewish'",
+			"symbol_type": "marker",
+			"marker_image": "jewish3.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'police'",
+			"symbol_type": "marker",
+			"marker_image": "police.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'post_box'",
+			"symbol_type": "marker",
+			"marker_image": "post_box.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'post_office'",
+			"symbol_type": "marker",
+			"marker_image": "post_office.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'pub'",
+			"symbol_type": "marker",
+			"marker_image": "pub.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'biergarten'",
+			"symbol_type": "marker",
+			"marker_image": "biergarten.p.16.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'recycling'",
+			"symbol_type": "marker",
+			"marker_image": "recycling.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'restaurant'",
+			"symbol_type": "marker",
+			"marker_image": "restaurant.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'fast_food'",
+			"symbol_type": "marker",
+			"marker_image": "fast_food.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'telephone'",
+			"symbol_type": "marker",
+			"marker_image": "telephone.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'emergency_phone'",
+			"symbol_type": "marker",
+			"marker_image": "sosphone.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'theatre'",
+			"symbol_type": "marker",
+			"marker_image": "theatre.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'toilets'",
+			"symbol_type": "marker",
+			"marker_image": "toilets.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'drinking_water'",
+			"symbol_type": "marker",
+			"marker_image": "drinking_water.p.20.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'prison'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_prison.p.20.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'viewpoint'",
+			"symbol_type": "marker",
+			"marker_image": "view_point.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'veterinary'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_veterinary.p.16.png"
+		},
+		{
+			"comment": "18-19",
+		    "res_max": 0.597164283477783,
+		    "res_min": 0,
+			"data_filter": "amenity = 'waste_basket'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_waste_basket.p.8.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "man_made = 'water_tower'",
+			"symbol_type": "marker",
+			"marker_image": "tower_water.p.20.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "historic = 'memorial'",
+			"symbol_type": "marker",
+			"marker_image": "tourist_memorial.p.20.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "historic = 'archaeological_site'",
+			"symbol_type": "marker",
+			"marker_image": "tourist_archaeological2.glow.16.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "shop = 'supermarket'",
+			"symbol_type": "marker",
+			"marker_image": "shop_supermarket.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'bakery'",
+			"symbol_type": "marker",
+			"marker_image": "shop_bakery.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'bicycle'",
+			"symbol_type": "marker",
+			"marker_image": "shopping_bicycle.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'books'",
+			"symbol_type": "marker",
+			"marker_image": "shop_books.p_16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'car'",
+			"symbol_type": "marker",
+			"marker_image": "shopping_car.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'car_repair'",
+			"symbol_type": "marker",
+			"marker_image": "shopping_car_repair.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'clothes' or shop = 'fashion'",
+			"symbol_type": "marker",
+			"marker_image": "shop_clothes.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'computer'",
+			"symbol_type": "marker",
+			"marker_image": "shop_clothes.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'convenience'",
+			"symbol_type": "marker",
+			"marker_image": "shop_convenience.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'department_store'",
+			"symbol_type": "marker",
+			"marker_image": "department_store.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'doityourself'",
+			"symbol_type": "marker",
+			"marker_image": "shop_diy.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'dry_cleaning'",
+			"symbol_type": "marker",
+			"marker_image": "shop_dry_cleaning.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'florist'",
+			"symbol_type": "marker",
+			"marker_image": "florist.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'gift'",
+			"symbol_type": "marker",
+			"marker_image": "shop_gift.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'greengrocer'",
+			"symbol_type": "marker",
+			"marker_image": "shop_greengrocer.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'hairdresser'",
+			"symbol_type": "marker",
+			"marker_image": "shop_hairdresser.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'jewelry'",
+			"symbol_type": "marker",
+			"marker_image": "shop_jewelry.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'mobile_phone'",
+			"symbol_type": "marker",
+			"marker_image": "shop_mobile_phone.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'optician'",
+			"symbol_type": "marker",
+			"marker_image": "shop_optician.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'pet'",
+			"symbol_type": "marker",
+			"marker_image": "shop_pet.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "leisure = 'playground'",
+			"symbol_type": "marker",
+			"marker_image": "playground.p.20.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "leisure = 'picnic_site'",
+			"symbol_type": "marker",
+			"marker_image": "picnic.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "leisure = 'slipway'",
+			"symbol_type": "marker",
+			"marker_image": "transport_slipway.p.20.png"
+		}]
+		},
+		"amenity-points-poly": {
+		"data_source": "osm",
+	    "data_name": "amenity_points_poly",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "13-19",
+		    "res_max": 19.10925707128906,
+		    "res_min": 0,
+			"data_filter": "tourism = 'alpine_hut'",
+			"symbol_type": "marker",
+			"marker_image": "alpinehut.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'shelter'",
+			"symbol_type": "marker",
+			"marker_image": "shelter2.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'atm'",
+			"symbol_type": "marker",
+			"marker_image": "atm2.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bank'",
+			"symbol_type": "marker",
+			"marker_image": "bank2.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bar'",
+			"symbol_type": "marker",
+			"marker_image": "bar.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bicycle_rental'",
+			"symbol_type": "marker",
+			"marker_image": "rental_bicycle.p.20.png"
+		},{
+			"comment": "16",
+		    "res_max": 2.388657133911133,
+		    "res_min": 2.388657133911133,
+			"data_filter": "amenity = 'bus_stop' or highway = 'bus_stop'",
+			"symbol_type": "marker",
+			"marker_image": "bus_stop_small.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bus_stop' or highway = 'bus_stop'",
+			"symbol_type": "marker",
+			"marker_image": "bus_stop.p.12.png"
+		},{
+			"comment": "16",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bus_station'",
+			"symbol_type": "marker",
+			"marker_image": "bus_station.n.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "highway = 'traffic_signals'",
+			"symbol_type": "marker",
+			"marker_image": "traffic_light.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'cafe'",
+			"symbol_type": "marker",
+			"marker_image": "cafe.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'camp_site'",
+			"symbol_type": "marker",
+			"marker_image": "camping.n.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "highway = 'ford'",
+			"symbol_type": "marker",
+			"marker_image": "transport_ford.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'caravan_site'",
+			"symbol_type": "marker",
+			"marker_image": "caravan_park.p.24.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'car_sharing'",
+			"symbol_type": "marker",
+			"marker_image": "car_share.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'chalet'",
+			"symbol_type": "marker",
+			"marker_image": "chalet.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'cinema'",
+			"symbol_type": "marker",
+			"marker_image": "cinema.p.24.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'fire_station'",
+			"symbol_type": "marker",
+			"marker_image": "firestation.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'fuel'",
+			"symbol_type": "marker",
+			"marker_image": "fuel.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'guest_house'",
+			"symbol_type": "marker",
+			"marker_image": "guest_house.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bed_and_breakfast'",
+			"symbol_type": "marker",
+			"marker_image": "bandb.p.20.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "amenity = 'hospital'",
+			"symbol_type": "marker",
+			"marker_image": "bandb.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'hostel'",
+			"symbol_type": "marker",
+			"marker_image": "hostel.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'hotel'",
+			"symbol_type": "marker",
+			"marker_image": "hotel2.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'motel'",
+			"symbol_type": "marker",
+			"marker_image": "information.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'embassy'",
+			"symbol_type": "marker",
+			"marker_image": "embassy.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'library'",
+			"symbol_type": "marker",
+			"marker_image": "library.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'courthouse'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_court.p.20.png"
+		},
+		{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "waterway = 'lock' or lock = 'yes'",
+			"symbol_type": "marker",
+			"marker_image": "lock_gate.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "man_made = 'mast'",
+			"symbol_type": "marker",
+			"marker_image": "communications.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'museum'",
+			"symbol_type": "marker",
+			"marker_image": "museum.p.16.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "amenity = 'parking' and (access = 'public' or access = 'yes' or (access is null or access != ''))",
+			"symbol_type": "marker",
+			"marker_image": "parking.p.16.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "amenity = 'parking' and (access != '' and (access is null or access != 'public') and (access is null or access != 'yes'))",
+			"symbol_type": "marker",
+			"marker_image": "parking_private.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'pharmacy'",
+			"symbol_type": "marker",
+			"marker_image": "pharmacy.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion = 'christian'",
+			"symbol_type": "marker",
+			"marker_image": "christian3.p.14.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion = 'muslim'",
+			"symbol_type": "marker",
+			"marker_image": "islamic3.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion = 'jewish'",
+			"symbol_type": "marker",
+			"marker_image": "jewish3.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion != 'christian' and religion != 'muslim' and religion != 'jewish'",
+			"symbol_type": "marker",
+			"marker_image": "jewish3.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'police'",
+			"symbol_type": "marker",
+			"marker_image": "police.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'post_box'",
+			"symbol_type": "marker",
+			"marker_image": "post_box.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'post_office'",
+			"symbol_type": "marker",
+			"marker_image": "post_office.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'pub'",
+			"symbol_type": "marker",
+			"marker_image": "pub.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'biergarten'",
+			"symbol_type": "marker",
+			"marker_image": "biergarten.p.16.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'recycling'",
+			"symbol_type": "marker",
+			"marker_image": "recycling.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'restaurant'",
+			"symbol_type": "marker",
+			"marker_image": "restaurant.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'fast_food'",
+			"symbol_type": "marker",
+			"marker_image": "fast_food.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'telephone'",
+			"symbol_type": "marker",
+			"marker_image": "telephone.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'emergency_phone'",
+			"symbol_type": "marker",
+			"marker_image": "sosphone.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'theatre'",
+			"symbol_type": "marker",
+			"marker_image": "theatre.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'toilets'",
+			"symbol_type": "marker",
+			"marker_image": "toilets.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'drinking_water'",
+			"symbol_type": "marker",
+			"marker_image": "drinking_water.p.20.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'prison'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_prison.p.20.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'viewpoint'",
+			"symbol_type": "marker",
+			"marker_image": "view_point.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'veterinary'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_veterinary.p.16.png"
+		},
+		{
+			"comment": "18-19",
+		    "res_max": 0.597164283477783,
+		    "res_min": 0,
+			"data_filter": "amenity = 'waste_basket'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_waste_basket.p.8.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "man_made = 'water_tower'",
+			"symbol_type": "marker",
+			"marker_image": "tower_water.p.20.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "historic = 'memorial'",
+			"symbol_type": "marker",
+			"marker_image": "tourist_memorial.p.20.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "historic = 'archaeological_site'",
+			"symbol_type": "marker",
+			"marker_image": "tourist_archaeological2.glow.16.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "shop = 'supermarket'",
+			"symbol_type": "marker",
+			"marker_image": "shop_supermarket.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'bakery'",
+			"symbol_type": "marker",
+			"marker_image": "shop_bakery.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'bicycle'",
+			"symbol_type": "marker",
+			"marker_image": "shopping_bicycle.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'books'",
+			"symbol_type": "marker",
+			"marker_image": "shop_books.p_16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'car'",
+			"symbol_type": "marker",
+			"marker_image": "shopping_car.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'car_repair'",
+			"symbol_type": "marker",
+			"marker_image": "shopping_car_repair.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'clothes' or shop = 'fashion'",
+			"symbol_type": "marker",
+			"marker_image": "shop_clothes.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'computer'",
+			"symbol_type": "marker",
+			"marker_image": "shop_clothes.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'convenience'",
+			"symbol_type": "marker",
+			"marker_image": "shop_convenience.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'department_store'",
+			"symbol_type": "marker",
+			"marker_image": "department_store.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'doityourself'",
+			"symbol_type": "marker",
+			"marker_image": "shop_diy.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'dry_cleaning'",
+			"symbol_type": "marker",
+			"marker_image": "shop_dry_cleaning.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'florist'",
+			"symbol_type": "marker",
+			"marker_image": "florist.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'gift'",
+			"symbol_type": "marker",
+			"marker_image": "shop_gift.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'greengrocer'",
+			"symbol_type": "marker",
+			"marker_image": "shop_greengrocer.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'hairdresser'",
+			"symbol_type": "marker",
+			"marker_image": "shop_hairdresser.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'jewelry'",
+			"symbol_type": "marker",
+			"marker_image": "shop_jewelry.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'mobile_phone'",
+			"symbol_type": "marker",
+			"marker_image": "shop_mobile_phone.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'optician'",
+			"symbol_type": "marker",
+			"marker_image": "shop_optician.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'pet'",
+			"symbol_type": "marker",
+			"marker_image": "shop_pet.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "leisure = 'playground'",
+			"symbol_type": "marker",
+			"marker_image": "playground.p.20.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "leisure = 'picnic_site'",
+			"symbol_type": "marker",
+			"marker_image": "picnic.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "leisure = 'slipway'",
+			"symbol_type": "marker",
+			"marker_image": "transport_slipway.p.20.png"
+		}]
+		}
     }
 }
