@@ -71,10 +71,16 @@ DROP VIEW IF EXISTS amenity_symbols;
 DROP VIEW IF EXISTS amenity_symbols_poly;
 DROP VIEW IF EXISTS amenity_points;
 DROP VIEW IF EXISTS amenity_points_poly;
+DROP VIEW IF EXISTS roads_text_name;
+DROP VIEW IF EXISTS text;
+DROP VIEW IF EXISTS text_poly;
+DROP VIEW IF EXISTS area_text;
+DROP VIEW IF EXISTS housenumbers;
+DROP VIEW IF EXISTS housenames;
 
 DELETE FROM geometry_columns
 WHERE f_table_name
-   IN ('roads', 'tunnels', 'minor_roads_casing', 'minor_roads_fill', 'turning_circle', 'footbikecycle_tunnels', 'tracks_tunnels', 'line_features', 'polygon_barriers', 'highway_area_casing', 'highway_area_fill', 'tracks_notunnel_nobridge', 'access_pre_bridges', 'direction_pre_bridges', 'landcover', 'landcover_line', 'sports_grounds', 'ferry_routes', 'aerialways', 'buildings_lz', 'buildings', 'water_lines_casing', 'water_areas', 'water_areas_overlay', 'glaciers_text', 'water_lines_low_zoom', 'water_lines', 'dam', 'marinas_area', 'piers_area', 'piers', 'locks', 'bridges_layer1', 'bridges_access1', 'bridges_directions1', 'bridges_layer2', 'bridges_access2', 'bridges_directions2', 'bridges_layer3', 'bridges_access3', 'bridges_directions3', 'bridges_layer4', 'bridges_access4', 'bridges_directions4', 'bridges_layer5', 'bridges_access5', 'bridges_directions5', 'trams', 'guideways', 'admin_01234', 'admin_5678', 'admin_other', 'placenames_large', 'placenames_capital', 'placenames_medium', 'placenames_small', 'amenity_stations', 'amenity_stations_poly', 'amenity_symbols', 'amenity_symbols_poly', 'amenity_points', 'amenity_points_poly');
+   IN ('roads', 'tunnels', 'minor_roads_casing', 'minor_roads_fill', 'turning_circle', 'footbikecycle_tunnels', 'tracks_tunnels', 'line_features', 'polygon_barriers', 'highway_area_casing', 'highway_area_fill', 'tracks_notunnel_nobridge', 'access_pre_bridges', 'direction_pre_bridges', 'landcover', 'landcover_line', 'sports_grounds', 'ferry_routes', 'aerialways', 'buildings_lz', 'buildings', 'water_lines_casing', 'water_areas', 'water_areas_overlay', 'glaciers_text', 'water_lines_low_zoom', 'water_lines', 'dam', 'marinas_area', 'piers_area', 'piers', 'locks', 'bridges_layer1', 'bridges_access1', 'bridges_directions1', 'bridges_layer2', 'bridges_access2', 'bridges_directions2', 'bridges_layer3', 'bridges_access3', 'bridges_directions3', 'bridges_layer4', 'bridges_access4', 'bridges_directions4', 'bridges_layer5', 'bridges_access5', 'bridges_directions5', 'trams', 'guideways', 'admin_01234', 'admin_5678', 'admin_other', 'placenames_large', 'placenames_capital', 'placenames_medium', 'placenames_small', 'amenity_stations', 'amenity_stations_poly', 'amenity_symbols', 'amenity_symbols_poly', 'amenity_points', 'amenity_points_poly', 'roads_text_name', 'text', 'text_poly', 'area_text');
 
 CREATE VIEW roads AS
 select way,highway,
@@ -551,6 +557,63 @@ select way,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,h
          or historic in ('memorial','archaeological_site')
          or leisure='playground';
 
+CREATE VIEW roads_text_name AS
+select way,highway,name
+       from planet_osm_line
+       where waterway IS NULL
+         and leisure IS NULL
+         and landuse IS NULL
+         and name is not null;
+         
+CREATE VIEW text AS
+select way,amenity,shop,access,leisure,landuse,man_made,"natural",place,tourism,ele,name,ref,military,aeroway,waterway,historic,'yes'::text as point
+       from planet_osm_point
+       where amenity is not null
+          or shop in ('supermarket','bakery','clothes','fashion','convenience','doityourself','hairdresser','department_store','butcher','car','car_repair','bicycle','florist')
+          or leisure is not null
+          or landuse is not null
+          or tourism is not null
+          or "natural" is not null
+          or man_made in ('lighthouse','windmill')
+          or place='island'
+          or military='danger_area'
+          or aeroway='gate'
+          or waterway='lock'
+          or historic in ('memorial','archaeological_site');
+          
+CREATE VIEW text_poly AS
+select way,aeroway,shop,access,amenity,leisure,landuse,man_made,"natural",place,tourism,NULL as ele,name,ref,military,waterway,historic,'no'::text as point
+       from planet_osm_polygon
+       where amenity is not null
+          or shop in ('supermarket','bakery','clothes','fashion','convenience','doityourself','hairdresser','department_store', 'butcher','car','car_repair','bicycle')
+          or leisure is not null
+          or landuse is not null
+          or tourism is not null
+          or "natural" is not null
+          or man_made in ('lighthouse','windmill')
+          or place='island'
+          or military='danger_area'
+          or historic in ('memorial','archaeological_site');
+          
+CREATE VIEW area_text AS
+select way,way_area,name
+       from planet_osm_polygon
+       where name is not null
+         and (waterway is null or waterway != 'riverbank')
+         and place is null
+         and boundary != 'administrative'
+       order by way_area desc;
+
+CREATE VIEW housenumbers AS
+select way,"addr:housenumber" from planet_osm_polygon where "addr:housenumber" is not null and building is not null
+       union
+       select way,"addr:housenumber" from planet_osm_point where "addr:housenumber" is not null;
+       
+CREATE VIEW housenames AS
+select way,"addr:housename" from planet_osm_polygon where "addr:housename" is not null and building is not null
+       union
+       select way,"addr:housename" from planet_osm_point where "addr:housename" is not null;
+
 INSERT INTO geometry_columns
   (f_table_catalog, f_table_schema, f_table_name, f_geometry_column, coord_dimension, srid, "type")
 VALUES
@@ -611,5 +674,11 @@ VALUES
   ('', 'public', 'amenity_symbols_poly', 'way', 2, 900913, 'GEOMETRY'),
   ('', 'public', 'amenity_symbols', 'way', 2, 900913, 'POINT'),
   ('', 'public', 'amenity_points_poly', 'way', 2, 900913, 'GEOMETRY'),
-  ('', 'public', 'amenity_points', 'way', 2, 900913, 'POINT');
+  ('', 'public', 'amenity_points', 'way', 2, 900913, 'POINT'),
+  ('', 'public', 'roads_text_name', 'way', 2, 900913, 'LINESTRING'),
+  ('', 'public', 'text', 'way', 2, 900913, 'POINT'),
+  ('', 'public', 'text_poly', 'way', 2, 900913, 'GEOMETRY'),
+  ('', 'public', 'area_text', 'way', 2, 900913, 'GEOMETRY'),
+  ('', 'public', 'housenumbers', 'way', 2, 900913, 'GEOMETRY'),
+  ('', 'public', 'housenames', 'way', 2, 900913, 'GEOMETRY');
 COMMIT;

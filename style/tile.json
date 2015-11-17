@@ -2,7 +2,7 @@
     "background_color": [181,208,208],
     "init": {
 	"center": [12956216.491, 4853426.417],
-	"res": 152.8740565703125
+	"res": 19.10925707128906
 	},
     "data_sources": {
 	"world": {
@@ -12529,6 +12529,7 @@
 	    "encode": "utf-8",
 	    "geometry_column": "way",
 	    "fields": "*",
+		"clip": false,
 	    "rules": [{
 			"comment": "18-19",
 		    "res_max": 0.597164283477783,
@@ -12831,6 +12832,7 @@
 	    "encode": "utf-8",
 	    "geometry_column": "way",
 	    "fields": "*",
+		"clip": false,
 	    "rules": [{
 			"comment": "16-19",
 		    "res_max": 2.388657133911133,
@@ -13164,7 +13166,604 @@
 		    "res_min": 0,
 			"data_filter": "amenity = 'hospital'",
 			"symbol_type": "marker",
+			"marker_image": "hospital.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'hostel'",
+			"symbol_type": "marker",
+			"marker_image": "hostel.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'hotel'",
+			"symbol_type": "marker",
+			"marker_image": "hotel2.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'motel'",
+			"symbol_type": "marker",
+			"marker_image": "information.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'embassy'",
+			"symbol_type": "marker",
+			"marker_image": "embassy.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'library'",
+			"symbol_type": "marker",
+			"marker_image": "library.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'courthouse'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_court.p.20.png"
+		},
+		{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "waterway = 'lock' or lock = 'yes'",
+			"symbol_type": "marker",
+			"marker_image": "lock_gate.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "man_made = 'mast'",
+			"symbol_type": "marker",
+			"marker_image": "communications.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "tourism = 'museum'",
+			"symbol_type": "marker",
+			"marker_image": "museum.p.16.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "amenity = 'parking' and (access = 'public' or access = 'yes' or (access is null or access != ''))",
+			"symbol_type": "marker",
+			"marker_image": "parking.p.16.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "amenity = 'parking' and (access != '' and (access is null or access != 'public') and (access is null or access != 'yes'))",
+			"symbol_type": "marker",
+			"marker_image": "parking_private.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'pharmacy'",
+			"symbol_type": "marker",
+			"marker_image": "pharmacy.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion = 'christian'",
+			"symbol_type": "marker",
+			"marker_image": "christian3.p.14.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion = 'muslim'",
+			"symbol_type": "marker",
+			"marker_image": "islamic3.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion = 'jewish'",
+			"symbol_type": "marker",
+			"marker_image": "jewish3.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'place_of_worship' and religion != 'christian' and religion != 'muslim' and religion != 'jewish'",
+			"symbol_type": "marker",
+			"marker_image": "jewish3.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'police'",
+			"symbol_type": "marker",
+			"marker_image": "police.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'post_box'",
+			"symbol_type": "marker",
+			"marker_image": "post_box.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'post_office'",
+			"symbol_type": "marker",
+			"marker_image": "post_office.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'pub'",
+			"symbol_type": "marker",
+			"marker_image": "pub.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'biergarten'",
+			"symbol_type": "marker",
+			"marker_image": "biergarten.p.16.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'recycling'",
+			"symbol_type": "marker",
+			"marker_image": "recycling.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'restaurant'",
+			"symbol_type": "marker",
+			"marker_image": "restaurant.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'fast_food'",
+			"symbol_type": "marker",
+			"marker_image": "fast_food.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'telephone'",
+			"symbol_type": "marker",
+			"marker_image": "telephone.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'emergency_phone'",
+			"symbol_type": "marker",
+			"marker_image": "sosphone.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'theatre'",
+			"symbol_type": "marker",
+			"marker_image": "theatre.p.20.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'toilets'",
+			"symbol_type": "marker",
+			"marker_image": "toilets.p.20.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'drinking_water'",
+			"symbol_type": "marker",
+			"marker_image": "food_drinkingtap.p.20.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'prison'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_prison.p.20.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'viewpoint'",
+			"symbol_type": "marker",
+			"marker_image": "view_point.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'veterinary'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_veterinary.p.16.png"
+		},
+		{
+			"comment": "18-19",
+		    "res_max": 0.597164283477783,
+		    "res_min": 0,
+			"data_filter": "amenity = 'waste_basket'",
+			"symbol_type": "marker",
+			"marker_image": "amenity_waste_basket.p.8.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "man_made = 'water_tower'",
+			"symbol_type": "marker",
+			"marker_image": "tower_water.p.20.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "historic = 'memorial'",
+			"symbol_type": "marker",
+			"marker_image": "tourist_memorial.p.20.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "historic = 'archaeological_site'",
+			"symbol_type": "marker",
+			"marker_image": "tourist_archaeological2.glow.16.png"
+		},
+		{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "shop = 'supermarket'",
+			"symbol_type": "marker",
+			"marker_image": "shop_supermarket.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'bakery'",
+			"symbol_type": "marker",
+			"marker_image": "shop_bakery.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'bicycle'",
+			"symbol_type": "marker",
+			"marker_image": "shopping_bicycle.p.16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'books'",
+			"symbol_type": "marker",
+			"marker_image": "shop_books.p_16.png"
+		},
+		{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'car'",
+			"symbol_type": "marker",
+			"marker_image": "shopping_car.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'car_repair'",
+			"symbol_type": "marker",
+			"marker_image": "shopping_car_repair.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'clothes' or shop = 'fashion'",
+			"symbol_type": "marker",
+			"marker_image": "shop_clothes.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'computer'",
+			"symbol_type": "marker",
+			"marker_image": "shop_clothes.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'convenience'",
+			"symbol_type": "marker",
+			"marker_image": "shop_convenience.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'department_store'",
+			"symbol_type": "marker",
+			"marker_image": "department_store.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'doityourself'",
+			"symbol_type": "marker",
+			"marker_image": "shop_diy.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'dry_cleaning'",
+			"symbol_type": "marker",
+			"marker_image": "shop_dry_cleaning.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'florist'",
+			"symbol_type": "marker",
+			"marker_image": "florist.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'gift'",
+			"symbol_type": "marker",
+			"marker_image": "shop_gift.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'greengrocer'",
+			"symbol_type": "marker",
+			"marker_image": "shop_greengrocer.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'hairdresser'",
+			"symbol_type": "marker",
+			"marker_image": "shop_hairdresser.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'jewelry'",
+			"symbol_type": "marker",
+			"marker_image": "shop_jewelry.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'mobile_phone'",
+			"symbol_type": "marker",
+			"marker_image": "shop_mobile_phone.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'optician'",
+			"symbol_type": "marker",
+			"marker_image": "shop_optician.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "shop = 'pet'",
+			"symbol_type": "marker",
+			"marker_image": "shop_pet.p_16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "leisure = 'playground'",
+			"symbol_type": "marker",
+			"marker_image": "playground.p.20.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "leisure = 'picnic_site'",
+			"symbol_type": "marker",
+			"marker_image": "picnic.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "leisure = 'slipway'",
+			"symbol_type": "marker",
+			"marker_image": "transport_slipway.p.20.png"
+		}]
+		},
+		"amenity-points-poly": {
+		"data_source": "osm",
+	    "data_name": "amenity_points_poly",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+		"clip": false,
+	    "rules": [{
+			"comment": "13-19",
+		    "res_max": 19.10925707128906,
+		    "res_min": 0,
+			"data_filter": "tourism = 'alpine_hut'",
+			"symbol_type": "marker",
+			"marker_image": "alpinehut.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'shelter'",
+			"symbol_type": "marker",
+			"marker_image": "shelter2.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'atm'",
+			"symbol_type": "marker",
+			"marker_image": "atm2.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bank'",
+			"symbol_type": "marker",
+			"marker_image": "bank2.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bar'",
+			"symbol_type": "marker",
+			"marker_image": "bar.p.20.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bicycle_rental'",
+			"symbol_type": "marker",
+			"marker_image": "rental_bicycle.p.20.png"
+		},{
+			"comment": "16",
+		    "res_max": 2.388657133911133,
+		    "res_min": 2.388657133911133,
+			"data_filter": "amenity = 'bus_stop' or highway = 'bus_stop'",
+			"symbol_type": "marker",
+			"marker_image": "bus_stop_small.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bus_stop' or highway = 'bus_stop'",
+			"symbol_type": "marker",
+			"marker_image": "bus_stop.p.12.png"
+		},{
+			"comment": "16",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bus_station'",
+			"symbol_type": "marker",
+			"marker_image": "bus_station.n.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "highway = 'traffic_signals'",
+			"symbol_type": "marker",
+			"marker_image": "traffic_light.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'cafe'",
+			"symbol_type": "marker",
+			"marker_image": "cafe.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'camp_site'",
+			"symbol_type": "marker",
+			"marker_image": "camping.n.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "highway = 'ford'",
+			"symbol_type": "marker",
+			"marker_image": "transport_ford.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'caravan_site'",
+			"symbol_type": "marker",
+			"marker_image": "caravan_park.p.24.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'car_sharing'",
+			"symbol_type": "marker",
+			"marker_image": "car_share.p.16.png"
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "tourism = 'chalet'",
+			"symbol_type": "marker",
+			"marker_image": "chalet.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'cinema'",
+			"symbol_type": "marker",
+			"marker_image": "cinema.p.24.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'fire_station'",
+			"symbol_type": "marker",
+			"marker_image": "firestation.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'fuel'",
+			"symbol_type": "marker",
+			"marker_image": "fuel.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'guest_house'",
+			"symbol_type": "marker",
+			"marker_image": "guest_house.p.16.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"data_filter": "amenity = 'bed_and_breakfast'",
+			"symbol_type": "marker",
 			"marker_image": "bandb.p.20.png"
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"data_filter": "amenity = 'hospital'",
+			"symbol_type": "marker",
+			"marker_image": "hospital.p.16.png"
 		},{
 			"comment": "17-19",
 		    "res_max": 1.194328566955567,
@@ -13368,7 +13967,7 @@
 		    "res_min": 0,
 			"data_filter": "amenity = 'toilets'",
 			"symbol_type": "marker",
-			"marker_image": "toilets.p.16.png"
+			"marker_image": "toilets.p.20.png"
 		},
 		{
 			"comment": "17-19",
@@ -13601,600 +14200,1853 @@
 			"marker_image": "transport_slipway.p.20.png"
 		}]
 		},
-		"amenity-points-poly": {
+		"power-line": {
 		"data_source": "osm",
-	    "data_name": "amenity_points_poly",
+	    "data_name": "planet_osm_line",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "way",
+	    "rules": [{
+			"comment": "14-15",
+		    "res_max": 9.55462853564453,
+		    "res_min": 4.777314267822266,
+			"data_filter": "\"power\"='line'",
+			"symbol_type": "line",
+			"line_width": 1,
+			"line_color": [119,119,119]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "\"power\"='line'",
+			"symbol_type": "line",
+			"line_width": 1.5,
+			"line_color": [119,119,119]
+		}]
+		},
+		"power_minorline": {
+		"data_source": "osm",
+	    "data_name": "planet_osm_line",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "way",
+	    "rules": [{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "\"power\"='minor_line'",
+			"symbol_type": "line",
+			"line_width": 0.5,
+			"line_color": [119,119,119]
+		}]
+		},
+		"power_towers": {
+		"data_source": "osm",
+	    "data_name": "planet_osm_point",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "way",
+	    "rules": [{
+			"comment": "14",
+		    "res_max": 9.55462853564453,
+		    "res_min": 9.55462853564453,
+			"data_filter": "\"power\"='tower'",
+			"symbol_type": "marker",
+			"marker_image": "power_tower_3x3.png"
+		},{
+			"comment": "15-16",
+		    "res_max": 4.777314267822266,
+		    "res_min": 2.388657133911133,
+			"data_filter": "\"power\"='tower'",
+			"symbol_type": "marker",
+			"marker_image": "power_tower_5x5.png"
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "marker",
+			"data_filter": "\"power\"='tower'",
+			"line_width": 1.5,
+			"marker_image": "power_tower.png"
+		}]
+		},
+	"power_poles": {
+		"data_source": "osm",
+	    "data_name": "planet_osm_point",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "way",
+	    "rules": [{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"data_filter": "\"power\"='pole'",
+			"symbol_type": "marker",
+			"marker_image": "power_pole.png"
+		}]
+		},
+	"roads-text-name": {
+		"data_source": "osm",
+	    "data_name": "roads_text_name",
 	    "encode": "utf-8",
 	    "geometry_column": "way",
 	    "fields": "*",
 	    "rules": [{
-			"comment": "13-19",
+			"comment": "13",
 		    "res_max": 19.10925707128906,
-		    "res_min": 0,
-			"data_filter": "tourism = 'alpine_hut'",
-			"symbol_type": "marker",
-			"marker_image": "alpinehut.p.16.png"
+		    "res_min": 19.10925707128906,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'trunk' or highway = 'primary'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_text_spacing": 1,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
 		},{
-			"comment": "16-19",
+			"comment": "13",
+		    "res_max": 19.10925707128906,
+		    "res_min": 19.10925707128906,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'secondary'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_text_spacing": 1,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "14",
+		    "res_max": 9.55462853564453,
+		    "res_min": 9.55462853564453,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'trunk' or highway = 'primary'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_text_spacing": 2,
+		    "label_text_color": [0, 0, 0]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'trunk' or highway = 'primary'",
+			"label_text_spacing": 2,
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+		    "label_text_color": [0, 0, 0]
+		},{
+			"comment": "14",
+		    "res_max": 9.55462853564453,
+		    "res_min": 9.55462853564453,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'secondary'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_text_spacing": 2,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'secondary'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_text_spacing": 4,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "15-16",
+		    "res_max": 4.777314267822266,
+		    "res_min": 2.388657133911133,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'tertiary'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_text_spacing": 3,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'tertiary'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 11,
+			"label_text_spacing": 6,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "13-15",
+		    "res_max": 19.10925707128906,
+		    "res_min": 4.777314267822266,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'proposed' or highway = 'construction'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_text_spacing": 5,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "16-18",
 		    "res_max": 2.388657133911133,
 		    "res_min": 0,
-			"data_filter": "amenity = 'shelter'",
-			"symbol_type": "marker",
-			"marker_image": "shelter2.p.16.png"
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'proposed' or highway = 'construction'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 11,
+			"label_text_spacing": 10,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
 		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'atm'",
-			"symbol_type": "marker",
-			"marker_image": "atm2.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'bank'",
-			"symbol_type": "marker",
-			"marker_image": "bank2.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'bar'",
-			"symbol_type": "marker",
-			"marker_image": "bar.p.20.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'bicycle_rental'",
-			"symbol_type": "marker",
-			"marker_image": "rental_bicycle.p.20.png"
+			"comment": "15",
+		    "res_max": 4.777314267822266,
+		    "res_min": 4.777314267822266,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'unclassified' or highway = 'residential'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_text_spacing": 6,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
 		},{
 			"comment": "16",
 		    "res_max": 2.388657133911133,
 		    "res_min": 2.388657133911133,
-			"data_filter": "amenity = 'bus_stop' or highway = 'bus_stop'",
-			"symbol_type": "marker",
-			"marker_image": "bus_stop_small.png"
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'unclassified' or highway = 'residential'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_text_spacing": 8,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
 		},{
 			"comment": "17-19",
 		    "res_max": 1.194328566955567,
 		    "res_min": 0,
-			"data_filter": "amenity = 'bus_stop' or highway = 'bus_stop'",
-			"symbol_type": "marker",
-			"marker_image": "bus_stop.p.12.png"
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway = 'unclassified' or highway = 'residential'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 11,
+			"label_text_spacing": 16,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
 		},{
-			"comment": "16",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "amenity = 'bus_station'",
-			"symbol_type": "marker",
-			"marker_image": "bus_station.n.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "highway = 'traffic_signals'",
-			"symbol_type": "marker",
-			"marker_image": "traffic_light.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'cafe'",
-			"symbol_type": "marker",
-			"marker_image": "cafe.p.16.png"
-		},{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "tourism = 'camp_site'",
-			"symbol_type": "marker",
-			"marker_image": "camping.n.16.png"
-		},{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "highway = 'ford'",
-			"symbol_type": "marker",
-			"marker_image": "transport_ford.p.16.png"
-		},{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "tourism = 'caravan_site'",
-			"symbol_type": "marker",
-			"marker_image": "caravan_park.p.24.png"
-		},{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "tourism = 'car_sharing'",
-			"symbol_type": "marker",
-			"marker_image": "car_share.p.16.png"
-		},{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "tourism = 'chalet'",
-			"symbol_type": "marker",
-			"marker_image": "chalet.p.16.png"
+			"comment": "15-16",
+		    "res_max": 4.777314267822266,
+		    "res_min": 2.388657133911133,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway not in ('trunk','primary','secondary','tertiary','proposed', 'unclassified', 'residential')",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_text_spacing": 10,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
 		},{
 			"comment": "17-19",
 		    "res_max": 1.194328566955567,
 		    "res_min": 0,
+			"symbol_type": "line_label",
+		    "label_field": "name",
+			"data_filter": "highway not in ('trunk','primary','secondary','tertiary','proposed', 'unclassified', 'residential')",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 11,
+			"label_text_spacing": 20,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		}]
+		},
+	"text": {
+		"data_source": "osm",
+	    "data_name": "text",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "12-19",
+		    "res_max": 38.21851414257813,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "place = 'island'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'pub' or amenity = 'restaurant' or amenity = 'cafe' or amenity = 'fast_food' or amenity = 'biergarten'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'bar'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 11,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'library' or amenity = 'theatre' or amenity = 'courthouse'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 12,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
 			"data_filter": "amenity = 'cinema'",
-			"symbol_type": "marker",
-			"marker_image": "cinema.p.24.png"
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 14,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
 		},{
 			"comment": "17-19",
 		    "res_max": 1.194328566955567,
 		    "res_min": 0,
-			"data_filter": "amenity = 'fire_station'",
-			"symbol_type": "marker",
-			"marker_image": "firestation.p.16.png"
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'parking' and ( access = 'public' or (access is null or access = ''))",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0, 102, 255]
 		},{
 			"comment": "17-19",
 		    "res_max": 1.194328566955567,
 		    "res_min": 0,
-			"data_filter": "amenity = 'fuel'",
-			"symbol_type": "marker",
-			"marker_image": "fuel.p.16.png"
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'parking' and ( access != '' and (access is null or access = 'public'))",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,204,175]
 		},{
 			"comment": "17-19",
 		    "res_max": 1.194328566955567,
 		    "res_min": 0,
-			"data_filter": "amenity = 'guest_house'",
-			"symbol_type": "marker",
-			"marker_image": "guest_house.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'bed_and_breakfast'",
-			"symbol_type": "marker",
-			"marker_image": "bandb.p.20.png"
-		},{
-			"comment": "15-19",
-		    "res_max": 4.777314267822266,
-		    "res_min": 0,
-			"data_filter": "amenity = 'hospital'",
-			"symbol_type": "marker",
-			"marker_image": "bandb.p.20.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "tourism = 'hostel'",
-			"symbol_type": "marker",
-			"marker_image": "hostel.p.20.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "tourism = 'hotel'",
-			"symbol_type": "marker",
-			"marker_image": "hotel2.p.20.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "tourism = 'motel'",
-			"symbol_type": "marker",
-			"marker_image": "information.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'embassy'",
-			"symbol_type": "marker",
-			"marker_image": "embassy.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'library'",
-			"symbol_type": "marker",
-			"marker_image": "library.p.20.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'courthouse'",
-			"symbol_type": "marker",
-			"marker_image": "amenity_court.p.20.png"
-		},
-		{
-			"comment": "15-19",
-		    "res_max": 4.777314267822266,
-		    "res_min": 0,
-			"data_filter": "waterway = 'lock' or lock = 'yes'",
-			"symbol_type": "marker",
-			"marker_image": "lock_gate.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "man_made = 'mast'",
-			"symbol_type": "marker",
-			"marker_image": "communications.p.20.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "tourism = 'museum'",
-			"symbol_type": "marker",
-			"marker_image": "museum.p.16.png"
-		},{
-			"comment": "15-19",
-		    "res_max": 4.777314267822266,
-		    "res_min": 0,
-			"data_filter": "amenity = 'parking' and (access = 'public' or access = 'yes' or (access is null or access != ''))",
-			"symbol_type": "marker",
-			"marker_image": "parking.p.16.png"
-		},{
-			"comment": "15-19",
-		    "res_max": 4.777314267822266,
-		    "res_min": 0,
-			"data_filter": "amenity = 'parking' and (access != '' and (access is null or access != 'public') and (access is null or access != 'yes'))",
-			"symbol_type": "marker",
-			"marker_image": "parking_private.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'pharmacy'",
-			"symbol_type": "marker",
-			"marker_image": "pharmacy.p.16.png"
-		},{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "amenity = 'place_of_worship' and religion = 'christian'",
-			"symbol_type": "marker",
-			"marker_image": "christian3.p.14.png"
-		},{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "amenity = 'place_of_worship' and religion = 'muslim'",
-			"symbol_type": "marker",
-			"marker_image": "islamic3.p.16.png"
-		},{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "amenity = 'place_of_worship' and religion = 'jewish'",
-			"symbol_type": "marker",
-			"marker_image": "jewish3.p.16.png"
-		},{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "amenity = 'place_of_worship' and religion != 'christian' and religion != 'muslim' and religion != 'jewish'",
-			"symbol_type": "marker",
-			"marker_image": "jewish3.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
 			"data_filter": "amenity = 'police'",
-			"symbol_type": "marker",
-			"marker_image": "police.p.16.png"
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
 		},{
 			"comment": "17-19",
 		    "res_max": 1.194328566955567,
 		    "res_min": 0,
-			"data_filter": "amenity = 'post_box'",
-			"symbol_type": "marker",
-			"marker_image": "post_box.p.16.png"
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'fire_station'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
 		},{
 			"comment": "17-19",
 		    "res_max": 1.194328566955567,
 		    "res_min": 0,
-			"data_filter": "amenity = 'post_office'",
-			"symbol_type": "marker",
-			"marker_image": "post_office.p.16.png"
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'place_of_worship'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 11,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'wood'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "13-19",
+		    "res_max": 19.10925707128906,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'peak'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 5,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "ele",
+			"data_filter": "\"natural\" = 'peak' and (name is null or name = '')",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 6,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "ele",
+			"data_filter": "\"natural\" = 'peak' and name != ''",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 18,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "13-19",
+		    "res_max": 19.10925707128906,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'volcano'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 5,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "ele",
+			"data_filter": "\"natural\" = 'volcano' and (name is null or name = '')",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 6,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "ele",
+			"data_filter": "\"natural\" = 'volcano' and name != ''",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 16,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'cave_entrance'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'memorial' or historic = 'archaeological_site'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 12,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'water' or \"natural\" = 'lake' or landuse = 'reservoir' or landuse = 'basin'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "(leisure != '' or landuse != '') and point = 'yes'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'bay'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
 		},{
 			"comment": "16-19",
 		    "res_max": 2.388657133911133,
 		    "res_min": 0,
-			"data_filter": "amenity = 'pub'",
-			"symbol_type": "marker",
-			"marker_image": "pub.p.16.png"
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'spring'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'alpine_hut'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'shelter'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'bank'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'hotel' or tourism = 'hostel' or tourism = 'chalet'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 11,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'embassy'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 8,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'guest_house'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'bed_and_breakfast'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 7,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'fuel' or amenity = 'bus_station'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'camp_site'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 15,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'caravan_site'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 19,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "waterway = 'lock'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "15-16",
+		    "res_max": 4.777314267822266,
+		    "res_min": 2.388657133911133,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "leisure = 'marina'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "leisure = 'marina'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,255]
+		},{
+			"comment": "14-15",
+		    "res_max": 9.55462853564453,
+		    "res_min": 4.777314267822266,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'theme_park'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
 		},{
 			"comment": "16-19",
 		    "res_max": 2.388657133911133,
 		    "res_min": 0,
-			"data_filter": "amenity = 'biergarten'",
-			"symbol_type": "marker",
-			"marker_image": "biergarten.p.16.png"
-		},
-		{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "amenity = 'recycling'",
-			"symbol_type": "marker",
-			"marker_image": "recycling.p.16.png"
-		},
-		{
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'theme_park'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
 			"comment": "17-19",
 		    "res_max": 1.194328566955567,
 		    "res_min": 0,
-			"data_filter": "amenity = 'restaurant'",
-			"symbol_type": "marker",
-			"marker_image": "restaurant.p.16.png"
-		},
-		{
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'museum'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
 			"comment": "17-19",
 		    "res_max": 1.194328566955567,
 		    "res_min": 0,
-			"data_filter": "amenity = 'fast_food'",
-			"symbol_type": "marker",
-			"marker_image": "fast_food.png"
-		},
-		{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'telephone'",
-			"symbol_type": "marker",
-			"marker_image": "telephone.p.16.png"
-		},
-		{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'emergency_phone'",
-			"symbol_type": "marker",
-			"marker_image": "sosphone.png"
-		},
-		{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'theatre'",
-			"symbol_type": "marker",
-			"marker_image": "theatre.p.16.png"
-		},
-		{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'toilets'",
-			"symbol_type": "marker",
-			"marker_image": "toilets.p.16.png"
-		},
-		{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "amenity = 'drinking_water'",
-			"symbol_type": "marker",
-			"marker_image": "drinking_water.p.20.png"
-		},
-		{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
 			"data_filter": "amenity = 'prison'",
-			"symbol_type": "marker",
-			"marker_image": "amenity_prison.p.20.png"
-		},
-		{
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 16,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
 			"comment": "16-19",
 		    "res_max": 2.388657133911133,
 		    "res_min": 0,
-			"data_filter": "tourism = 'viewpoint'",
-			"symbol_type": "marker",
-			"marker_image": "view_point.p.16.png"
-		},
-		{
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'attraction'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,0,51]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'university'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'school' or amenity = 'college'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'kindergarten'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "man_made = 'lighthouse'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 16,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
 			"comment": "17-19",
 		    "res_max": 1.194328566955567,
 		    "res_min": 0,
-			"data_filter": "amenity = 'veterinary'",
-			"symbol_type": "marker",
-			"marker_image": "amenity_veterinary.p.16.png"
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "man_made = 'windmill'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 12,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'hospital'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [218,0,146]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'pharmacy'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [218,0,146]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "shop in ('bakery','clothes','fashion','convenience','doityourself','hairdresser','butcher','car','car_repair','bicycle','florist')",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [153,53,153]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "shop = 'supermarket' or shop = 'department_store'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [153,53,153]
+		},{
+			"comment": "12-19",
+		    "res_max": 38.21851414257813,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "name",
+			"data_filter": "military = 'danger_area'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [255,192,203]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "label",
+		    "label_field": "ref",
+			"data_filter": "aeroway = 'gate'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [170, 102,204]
+		}]
 		},
-		{
+		"text-poly": {
+		"data_source": "osm",
+	    "data_name": "text_poly",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+		"clip": false,
+	    "rules": [{
+			"comment": "12-19",
+		    "res_max": 38.21851414257813,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "place = 'island'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'pub' or amenity = 'restaurant' or amenity = 'cafe' or amenity = 'fast_food' or amenity = 'biergarten'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'bar'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 11,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'library' or amenity = 'theatre' or amenity = 'courthouse'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 12,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'cinema'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 14,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'parking' and ( access = 'public' or (access is null or access = ''))",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0, 102, 255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'parking' and ( access != '' and (access is null or access = 'public'))",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,204,175]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'police'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'fire_station'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'place_of_worship'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 11,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'wood'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "13-19",
+		    "res_max": 19.10925707128906,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'peak'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 5,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "ele",
+			"data_filter": "\"natural\" = 'peak' and (name is null or name = '')",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 6,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "ele",
+			"data_filter": "\"natural\" = 'peak' and name != ''",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 18,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "13-19",
+		    "res_max": 19.10925707128906,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'volcano'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 5,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "ele",
+			"data_filter": "\"natural\" = 'volcano' and (name is null or name = '')",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 6,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "ele",
+			"data_filter": "\"natural\" = 'volcano' and name != ''",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 16,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'cave_entrance'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'memorial' or historic = 'archaeological_site'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 12,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [128,128,0]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'water' or \"natural\" = 'lake' or landuse = 'reservoir' or landuse = 'basin'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "(leisure != '' or landuse != '') and point = 'yes'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,0]
+		},{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'bay'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "\"natural\" = 'spring'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'alpine_hut'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'shelter'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'bank'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,153,204]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'hotel' or tourism = 'hostel' or tourism = 'chalet'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 11,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'embassy'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 8,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'guest_house'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'bed_and_breakfast'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 7,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'fuel' or amenity = 'bus_station'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'camp_site'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 15,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'caravan_site'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 19,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "waterway = 'lock'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,102,255]
+		},{
+			"comment": "15-16",
+		    "res_max": 4.777314267822266,
+		    "res_min": 2.388657133911133,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "leisure = 'marina'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,255]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "leisure = 'marina'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,255]
+		},{
+			"comment": "14-15",
+		    "res_max": 9.55462853564453,
+		    "res_min": 4.777314267822266,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'theme_park'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'theme_park'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'museum'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'prison'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 16,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "tourism = 'attraction'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [102,0,51]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'university'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'school' or amenity = 'college'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'kindergarten'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "man_made = 'lighthouse'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 16,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "man_made = 'windmill'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 12,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [115,74,8]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'hospital'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 10,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [218,0,146]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "amenity = 'pharmacy'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [218,0,146]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "shop in ('bakery','clothes','fashion','convenience','doityourself','hairdresser','butcher','car','car_repair','bicycle','florist')",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [153,53,153]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "shop = 'supermarket' or shop = 'department_store'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [153,53,153]
+		},{
+			"comment": "12-19",
+		    "res_max": 38.21851414257813,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "military = 'danger_area'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [255,192,203]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "ref",
+			"data_filter": "aeroway = 'gate'",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+			"label_offset_y": 0,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [170, 102,204]
+		}]
+		},
+		"area-text": {
+		"data_source": "osm",
+	    "data_name": "area_text",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+		"visible": "true",
+		"clip": false,
+	    "rules": [{
+			"comment": "14-19",
+		    "res_max": 9.55462853564453,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "way_area >= 150000",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "15-19",
+		    "res_max": 4.777314267822266,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "way_area >= 80000 and way_area < 150000",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "16-19",
+		    "res_max": 2.388657133911133,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "way_area >= 20000 and way_area < 80000",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		},{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+			"data_filter": "way_area < 20000",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 10,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [0,0,51]
+		}]
+		},
+		"interpolation_lines": {
+		"data_source": "osm",
+	    "data_name": "planet_osm_line",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "way",
+	    "rules": [{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "line",
+			"data_filter": "\"addr:interpolation\" is not null",
+			"line_color": [136,136,136],
+			"line_dasharray": [2,4],
+			"line_width": 1
+		}]
+		},
+		"housenumbers": {
+		"data_source": "osm",
+	    "data_name": "housenumbers",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "17-19",
+		    "res_max": 1.194328566955567,
+		    "res_min": 0,
+			"symbol_type": "polygon_label",
+		    "label_field": "addr:housenumber",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 9,
+			"label_align": "center",
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [68,68,68]
+		}]
+		},
+		"housenames": {
+		"data_source": "osm",
+	    "data_name": "housenames",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "*",
+	    "rules": [{
+			"comment": "17",
+		    "res_max": 1.194328566955567,
+		    "res_min": 1.194328566955567,
+			"symbol_type": "polygon_label",
+		    "label_field": "addr:housename",
+		    "label_text_font": "Microsoft Yahei",
+			"label_align": "center",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [68,68,68]
+		},{
 			"comment": "18-19",
 		    "res_max": 0.597164283477783,
 		    "res_min": 0,
-			"data_filter": "amenity = 'waste_basket'",
-			"symbol_type": "marker",
-			"marker_image": "amenity_waste_basket.p.8.png"
+			"symbol_type": "polygon_label",
+		    "label_field": "addr:housename",
+		    "label_text_font": "Microsoft Yahei",
+			"label_align": "center",
+		    "label_text_size": 9,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [68,68,68]
+		}]
 		},
-		{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
+	"misc_boundaries": {
+		"data_source": "osm",
+	    "data_name": "planet_osm_polygon",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "way,way_area,name,boundary",
+		"visible": "true",
+		"clip": false,
+	    "rules": [{
+			"comment": "7-9",
+		    "res_max": 1222.9924525625,
+		    "res_min": 305.748113140625,
+			"symbol_type": "fill",
+			"data_filter": "boundary='national_park' and building is null",
+		    "fill_color": [0, 0, 255],
+			"fill_opacity": 0.05,
+			"outline_color": [0, 0, 255],
+			"outline_width": 1.5,
+			"outline_opacity": 0.15,
+			"outline_dasharray": [4, 2]
+		},{
+			"comment": "10-12",
+		    "res_max": 152.8740565703125,
+		    "res_min": 38.21851414257813,
+			"symbol_type": "fill",
+			"data_filter": "boundary='national_park' and building is null",
+		    "fill_color": [0, 0, 255],
+			"fill_opacity": 0.05,
+			"outline_color": [0, 0, 255],
+			"outline_width": 3,
+			"outline_opacity": 0.15,
+			"outline_dasharray": [6, 2]
+		},{
+			"comment": "13-19",
+		    "res_max": 19.10925707128906,
 		    "res_min": 0,
-			"data_filter": "man_made = 'water_tower'",
-			"symbol_type": "marker",
-			"marker_image": "tower_water.p.20.png"
+			"symbol_type": "fill",
+			"data_filter": "boundary='national_park' and building is null",
+		    "fill_color": [0, 0, 255],
+			"fill_opacity": 0,
+			"outline_color": [0, 0, 255],
+			"outline_width": 3,
+			"outline_opacity": 0.15,
+			"outline_dasharray": [6, 2]
+		},{
+			"comment": "8-9",
+		    "res_max": 612,
+		    "res_min": 305,
+			"data_filter": "boundary='national_park' and building is null and way_area >= 200000000",
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 8,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [153,204,153]
+		},{
+			"comment": "10-11",
+		    "res_max": 152.8740565703125,
+		    "res_min": 76.43702828515625,
+			"data_filter": "boundary='national_park' and building is null",
+			"symbol_type": "polygon_label",
+		    "label_field": "name",
+		    "label_text_font": "Microsoft Yahei",
+		    "label_text_size": 11,
+		    "label_text_outline_color": [255,255,255],
+		    "label_text_color": [153,204,153]
+		}]
 		},
-		{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "historic = 'memorial'",
-			"symbol_type": "marker",
-			"marker_image": "tourist_memorial.p.20.png"
-		},
-		{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "historic = 'archaeological_site'",
-			"symbol_type": "marker",
-			"marker_image": "tourist_archaeological2.glow.16.png"
-		},
-		{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "shop = 'supermarket'",
-			"symbol_type": "marker",
-			"marker_image": "shop_supermarket.p.16.png"
-		},
-		{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'bakery'",
-			"symbol_type": "marker",
-			"marker_image": "shop_bakery.p.16.png"
-		},
-		{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'bicycle'",
-			"symbol_type": "marker",
-			"marker_image": "shopping_bicycle.p.16.png"
-		},
-		{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'books'",
-			"symbol_type": "marker",
-			"marker_image": "shop_books.p_16.png"
-		},
-		{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'car'",
-			"symbol_type": "marker",
-			"marker_image": "shopping_car.p.16.png"
+	"theme_park": {
+		"data_source": "osm",
+	    "data_name": "planet_osm_polygon",
+	    "encode": "utf-8",
+	    "geometry_column": "way",
+	    "fields": "way",
+		"clip": false,
+	    "rules": [{
+			"comment": "13-14",
+		    "res_max": 1222.9924525625,
+		    "res_min": 305.748113140625,
+			"symbol_type": "fill",
+			"data_filter": "tourism='theme_park'",
+		    "fill_color": [115,74,8],
+			"fill_opacity": 0,
+			"outline_color": [115,74,8],
+			"outline_width": 1.5,
+			"outline_opacity": 0.6,
+			"outline_dasharray": [9, 3]
 		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'car_repair'",
-			"symbol_type": "marker",
-			"marker_image": "shopping_car_repair.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'clothes' or shop = 'fashion'",
-			"symbol_type": "marker",
-			"marker_image": "shop_clothes.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'computer'",
-			"symbol_type": "marker",
-			"marker_image": "shop_clothes.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'convenience'",
-			"symbol_type": "marker",
-			"marker_image": "shop_convenience.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'department_store'",
-			"symbol_type": "marker",
-			"marker_image": "department_store.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'doityourself'",
-			"symbol_type": "marker",
-			"marker_image": "shop_diy.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'dry_cleaning'",
-			"symbol_type": "marker",
-			"marker_image": "shop_dry_cleaning.p_16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'florist'",
-			"symbol_type": "marker",
-			"marker_image": "florist.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'gift'",
-			"symbol_type": "marker",
-			"marker_image": "shop_gift.p_16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'greengrocer'",
-			"symbol_type": "marker",
-			"marker_image": "shop_greengrocer.p_16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'hairdresser'",
-			"symbol_type": "marker",
-			"marker_image": "shop_hairdresser.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'jewelry'",
-			"symbol_type": "marker",
-			"marker_image": "shop_jewelry.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'mobile_phone'",
-			"symbol_type": "marker",
-			"marker_image": "shop_mobile_phone.p_16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'optician'",
-			"symbol_type": "marker",
-			"marker_image": "shop_optician.p_16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "shop = 'pet'",
-			"symbol_type": "marker",
-			"marker_image": "shop_pet.p_16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "leisure = 'playground'",
-			"symbol_type": "marker",
-			"marker_image": "playground.p.20.png"
-		},{
-			"comment": "16-19",
-		    "res_max": 2.388657133911133,
-		    "res_min": 0,
-			"data_filter": "leisure = 'picnic_site'",
-			"symbol_type": "marker",
-			"marker_image": "picnic.p.16.png"
-		},{
-			"comment": "17-19",
-		    "res_max": 1.194328566955567,
-		    "res_min": 0,
-			"data_filter": "leisure = 'slipway'",
-			"symbol_type": "marker",
-			"marker_image": "transport_slipway.p.20.png"
+			"comment": "15-19",
+		    "res_max": 1222.9924525625,
+		    "res_min": 305.748113140625,
+			"symbol_type": "fill",
+			"data_filter": "tourism='theme_park'",
+		    "fill_color": [115,74,8],
+			"fill_opacity": 0,
+			"outline_color": [115,74,8],
+			"outline_width": 2.5,
+			"outline_opacity": 0.6,
+			"outline_dasharray": [9, 3]
 		}]
 		}
     }
