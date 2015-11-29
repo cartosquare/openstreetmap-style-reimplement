@@ -1,0 +1,30 @@
+{
+	"data_sources": {
+		"world": {
+			"source": "data/simplified-land-polygons-complete-3857",
+			"type": "shapefile"
+		},
+		"coast-poly": {
+			"source": "data/land-polygons-split-3857",
+			"type": "shapefile"
+		},
+		"builtup": {
+			"source": "data/world_boundaries-3857",
+			"type": "shapefile"
+		},
+		"necountries": {
+			"source": "data/ne_110m_admin_0_boundary_lines_land-3857",
+			"type": "shapefile"
+		},
+		"nepopulated": {
+			"source": "data/ne_10m_populated_places-3857",
+			"type": "shapefile"
+		},
+		"osm": {
+			"source": "PG:dbname=osm host=localhost port=5432 user=gis",
+			"type": "sql",
+			"initial_size": 10,
+			"max_size": 20
+		}
+	}
+}

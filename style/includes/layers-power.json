@@ -1,0 +1,86 @@
+{
+	"layers": {
+		"power-line": {
+			"data_source": "osm",
+			"data_name": "planet_osm_line",
+			"encode": "utf-8",
+			"geometry_column": "way",
+			"fields": "way",
+			"rules": [
+				{
+					"res_max": "@z14",
+					"res_min": "@z15",
+					"data_filter": "\"power\"='line'",
+					"line_width": 1,
+					"line_color": "@amenity-points-power_line"
+				},
+				{
+					"res_max": "@z16",
+					"res_min": "@z19",
+					"data_filter": "\"power\"='line'",
+					"line_width": 1.5,
+					"line_color": "@amenity-points-power_line"
+				}
+			]
+		},
+		"power_minorline": {
+			"data_source": "osm",
+			"data_name": "planet_osm_line",
+			"encode": "utf-8",
+			"geometry_column": "way",
+			"fields": "way",
+			"rules": [
+				{
+					"res_max": "@z16",
+					"res_min": "@z19",
+					"data_filter": "\"power\"='minor_line'",
+					"line_width": 0.5,
+					"line_color": "@amenity-points-power_line"
+				}
+			]
+		},
+		"power_towers": {
+			"data_source": "osm",
+			"data_name": "planet_osm_point",
+			"encode": "utf-8",
+			"geometry_column": "way",
+			"fields": "way",
+			"rules": [
+				{
+					"res_max": "@z14",
+					"res_min": "@z14",
+					"data_filter": "\"power\"='tower'",
+					"marker_image": "@amenity-points-power-lowz"
+				},
+				{
+					"res_max": "@z15",
+					"res_min": "@z16",
+					"data_filter": "\"power\"='tower'",
+					"marker_image": "@amenity-points-power-middlez"
+				},
+				{
+					"res_max": "@z17",
+					"res_min": "@z19",
+					"data_filter": "\"power\"='tower'",
+					"line_width": 1.5,
+					"marker_image": "@amenity-points-power-highz"
+				}
+			]
+		},
+		"power_poles": {
+			"data_source": "osm",
+			"data_name": "planet_osm_point",
+			"encode": "utf-8",
+			"geometry_column": "way",
+			"fields": "way",
+			"rules": [
+				{
+					"res_max": "@z16",
+					"res_min": "@z19",
+					"data_filter": "\"power\"='pole'",
+					"marker_image": "@amenity-points-pole"
+				}
+			]
+		}
+	}
+}
