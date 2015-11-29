@@ -274,7 +274,7 @@
 			"res_min": "@z19",
 			"label_field": "name",
 			"data_filter": "\"natural\" = 'cave_entrance'",
-			"label_text_font": "@text-peak_volcano_cave",
+			"label_text_font": "@text-peak",
 			"label_text_size": 10,
 			"label_offset_y": 9,
 			"label_align": "center",
@@ -283,7 +283,7 @@
 				255,
 				255
 			],
-			"label_text_color": "@text-peak_volcano_cave"
+			"label_text_color": "@text-peak"
 		},
 		{
 			"res_max": "@z17",

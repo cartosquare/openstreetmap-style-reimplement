@@ -6,7 +6,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"text_style.json"
 			]
 		},
@@ -17,7 +17,7 @@
 			"geometry_column": "way",
 			"fields": "*",
 			"clip": false,
-			"style_file": [
+			"style_files": [
 				"text_style.json"
 			]
 		},

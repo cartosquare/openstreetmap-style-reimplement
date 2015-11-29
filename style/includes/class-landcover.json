@@ -118,7 +118,8 @@
 				102,
 				102,
 				0
-			]
+			],
+			"outline_color": [102,102,0]
 		},
 		"landcover-danger_area-lowz": {
 			"tag": "危险区、禁区",
@@ -138,6 +139,12 @@
 				207,
 				236,
 				168
+			]
+		},
+		"landcover-service_rest_area": {
+			"tag": "高速公路休息区",
+			"fill_color": [
+				239, 200, 200
 			]
 		},
 		"landcover-park": {

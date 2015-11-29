@@ -862,7 +862,7 @@
 				{
 					"res_max": "@z12",
 					"res_min": "@z19",
-					"fill_color": "piers-area"
+					"fill_color": "@piers-area"
 				}
 			]
 		},
@@ -877,7 +877,7 @@
 					"res_max": "@z11",
 					"res_min": "@z12",
 					"data_filter": "man_made = 'breakwater' or man_made = 'groyne'",
-					"line_color": "piers-breakwater_groyne",
+					"line_color": "@piers-breakwater_groyne",
 					"line_width": 1
 				},
 				{
@@ -891,7 +891,7 @@
 					"res_max": "@z13",
 					"res_min": "@z15",
 					"data_filter": "man_made = 'breakwater' or man_made = 'groyne'",
-					"line_color": "piers-breakwater_groyne",
+					"line_color": "@piers-breakwater_groyne",
 					"line_width": 2
 				},
 				{
@@ -905,7 +905,7 @@
 					"res_max": "@z16",
 					"res_min": "@z19",
 					"data_filter": "man_made = 'breakwater' or man_made = 'groyne'",
-					"line_color": "piers-breakwater_groyne",
+					"line_color": "@piers-breakwater_groyne",
 					"line_width": 4
 				},
 				{

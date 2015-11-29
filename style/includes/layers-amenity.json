@@ -6,7 +6,7 @@
                   "encode": "utf-8",
                   "geometry_column": "way",
                   "fields": "*",
-                  "style_file": [
+                  "style_files": [
                         "amenity_stations_style.json"
                   ]
             },
@@ -17,7 +17,7 @@
                   "geometry_column": "way",
                   "fields": "*",
                   "clip": false,
-                  "style_file": [
+                  "style_files": [
                         "amenity_stations_style.json"
                   ]
             },
@@ -27,7 +27,7 @@
                   "encode": "utf-8",
                   "geometry_column": "way",
                   "fields": "*",
-                  "style_file": [
+                  "style_files": [
                         "amenity_symbols_style.json"
                   ]
             },
@@ -38,7 +38,7 @@
                   "geometry_column": "way",
                   "fields": "*",
                   "clip": false,
-                  "style_file": [
+                  "style_files": [
                         "amenity_symbols_style.json"
                   ]
             },
@@ -48,7 +48,7 @@
                   "encode": "utf-8",
                   "geometry_column": "way",
                   "fields": "*",
-                  "style_file": [
+                  "style_files": [
                         "amenity_points_style.json"
                   ]
             },
@@ -59,7 +59,7 @@
                   "geometry_column": "way",
                   "fields": "*",
                   "clip": false,
-                  "style_file": [
+                  "style_files": [
                         "amenity_points_style.json"
                   ]
             }

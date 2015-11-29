@@ -227,7 +227,7 @@
 					"res_min": "@z19",
 					"data_filter": "landuse = 'retail'",
 					"fill_color": "@landcover-retail",
-					"outline_color": "landcover-retail",
+					"outline_color": "@landcover-retail",
 					"outline_width": 0.3
 				},
 				{
@@ -293,7 +293,7 @@
 					"res_max": "@z10",
 					"res_min": "@z19",
 					"data_filter": "\"natural\" = 'heath'",
-					"fill_color": "landcover-heath"
+					"fill_color": "@landcover-heath"
 				},
 				{
 					"res_max": "@z10",
@@ -372,7 +372,7 @@
 					"res_max": "@z14",
 					"res_min": "@z19",
 					"data_filter": "highway = 'services' or highway = 'rest_area'",
-					"fill_color": "landcover-service_rest_area"
+					"fill_color": "@landcover-service_rest_area"
 				}
 			]
 		},

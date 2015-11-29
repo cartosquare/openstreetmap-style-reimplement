@@ -6,7 +6,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_layer_style.json"
 			]
 		},
@@ -16,7 +16,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_access_style.json"
 			]
 		},
@@ -26,7 +26,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_directions_style.json"
 			]
 		},
@@ -36,7 +36,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_layer_style.json"
 			]
 		},
@@ -46,7 +46,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_access_style.json"
 			]
 		},
@@ -56,7 +56,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_directions_style.json"
 			]
 		},
@@ -66,7 +66,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_layer_style.json"
 			]
 		},
@@ -76,7 +76,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_access_style.json"
 			]
 		},
@@ -86,7 +86,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_directions_style.json"
 			]
 		},
@@ -96,7 +96,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_layer_style.json"
 			]
 		},
@@ -106,7 +106,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_access_style.json"
 			]
 		},
@@ -116,7 +116,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_directions_style.json"
 			]
 		},
@@ -126,7 +126,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_layer_style.json"
 			]
 		},
@@ -136,7 +136,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_access_style.json"
 			]
 		},
@@ -146,7 +146,7 @@
 			"encode": "utf-8",
 			"geometry_column": "way",
 			"fields": "*",
-			"style_file": [
+			"style_files": [
 				"bridges_directions_style.json"
 			]
 		}

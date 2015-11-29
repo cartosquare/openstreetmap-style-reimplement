@@ -748,13 +748,18 @@
 					"res_max": "@z13",
 					"res_min": "@z19",
 					"data_filter": "railway = 'rail' and tunnel = 'yes'",
-					"line_color": "@rail_tunnel",
-					"line_width": 3,
-					"line_join": "round",
-					"line_dasharray": [
+					"line_color": [
 						253,
 						253,
 						253
+					],
+					"line_width": 3,
+					"line_join": "round",
+					"line_dasharray": [
+						0,
+						1,
+						1,
+						8
 					]
 				},
 				{
